@@ -1,0 +1,876 @@
+fileFormatVersion: 2
+guid: 912f4f3fb97357d4aa8981c6fef05ba7
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: AethraPotion_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 2000
+      height: 3000
+    spriteID: 24b54b1335a49464183a849e248bd1ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Blushed
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1348
+      y: 7691
+      width: 476
+      height: 393
+    spriteID: aa3f6911882c91243b63d096ab2b43f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1348, y: 7691}
+    spritePosition: {x: 746, y: 2226}
+  - name: Happy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 825
+      y: 7691
+      width: 515
+      height: 419
+    spriteID: 83c54748e4555a548831f038e1794aa2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 825, y: 7691}
+    spritePosition: {x: 716, y: 2190}
+  - name: Neutral
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 7528
+      width: 575
+      height: 497
+    spriteID: 560e8b58f06cc164cb059335186f4721
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 7528}
+    spritePosition: {x: 690, y: 2197}
+  - name: Ponytail
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2012
+      y: 2627
+      width: 1797
+      height: 2560
+    spriteID: 56ef21a3ac8d0f04a82349ecb1782045
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2012, y: 2627}
+    spritePosition: {x: 178, y: 422}
+  - name: Braids
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2012
+      y: 4
+      width: 1844
+      height: 2615
+    spriteID: e1008c9db642c1e4da1630bef6c2e714
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2012, y: 4}
+    spritePosition: {x: 111, y: 293}
+  - name: Short
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 2255
+      width: 922
+      height: 970
+    spriteID: 79cc63080734bd945b1a96da6ac74421
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 2255}
+    spritePosition: {x: 542, y: 1988}
+  - name: 'Normal '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2012
+      y: 5195
+      width: 1669
+      height: 2573
+    spriteID: 2bbdfafb622c0dd4b8f20982cd73a16e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2012, y: 5195}
+    spritePosition: {x: 192, y: 374}
+  - name: Pheromones cloud
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5745
+      width: 1917
+      height: 1938
+    spriteID: d233ade78fc459f4f9e97e5dd1c5fd76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 5745}
+    spritePosition: {x: 78, y: 205}
+  - name: Sweat
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3864
+      y: 4
+      width: 1015
+      height: 2152
+    spriteID: 69d9181b96d92a1429eabc06cba77eb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3864, y: 4}
+    spritePosition: {x: 470, y: 164}
+  - name: Body hair
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 4
+      width: 1283
+      height: 1171
+    spriteID: b1d2b1edf058b3643b6ec13f66ee2862
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 4}
+    spritePosition: {x: 324, y: 577}
+  - name: Big boob belly big
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 4714
+      width: 1254
+      height: 646
+    spriteID: 85f65de36f380d440af18677126397f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 4714}
+    spritePosition: {x: 318, y: 1262}
+  - name: Belly big
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 1183
+      width: 1035
+      height: 1064
+    spriteID: b1140f5daa8da2f41854605794cb9308
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 1183}
+    spritePosition: {x: 484, y: 448}
+  - name: Big boob belly smol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 3985
+      width: 1153
+      height: 721
+    spriteID: 58bbe1c0505df394b9b364bc6c016e7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 3985}
+    spritePosition: {x: 379, y: 1150}
+  - name: Belly smol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 5368
+      width: 728
+      height: 785
+    spriteID: f1563f51e8e809848bd1bffb13d72886
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 5368}
+    spritePosition: {x: 642, y: 683}
+  - name: Penis big
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 6161
+      width: 394
+      height: 1359
+    spriteID: a272ec851f910d34da958f8e35ed8d5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 6161}
+    spritePosition: {x: 831, y: 151}
+  - name: Penis Medium
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 5817
+      y: 2255
+      width: 293
+      height: 916
+    spriteID: 62995a101f1c6a44ca65cd0b02fa3d72
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 5817, y: 2255}
+    spritePosition: {x: 912, y: 300}
+  - name: Penis smol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 5289
+      y: 6161
+      width: 260
+      height: 570
+    spriteID: 87bbaad25b31ea14aac725b1d3f9146d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 5289, y: 6161}
+    spritePosition: {x: 925, y: 363}
+  - name: Boobs big
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4887
+      y: 3233
+      width: 1175
+      height: 744
+    spriteID: 883275551dae50c4bbddc83adbb4e121
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4887, y: 3233}
+    spritePosition: {x: 351, y: 1089}
+  - name: Boobs Medium
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3864
+      y: 2164
+      width: 957
+      height: 548
+    spriteID: 941aa265da511814db5810f375870ce0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3864, y: 2164}
+    spritePosition: {x: 477, y: 1333}
+  - name: Boobs smol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7691
+      width: 813
+      height: 494
+    spriteID: 556299f56b8f15d489de89316e72b737
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 7691}
+    spritePosition: {x: 574, y: 1353}
+  - name: Base
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3012
+      width: 1778
+      height: 2725
+    spriteID: c5a33bfe0d6560e44b5005de15018ceb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 3012}
+    spritePosition: {x: 195, y: 0}
+  - name: BG
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 2000
+      height: 3000
+    spriteID: fd4d21aaa9ee12e43957dd8c80c5ee82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 0, y: 0}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Blushed
+    spriteName: Blushed
+    isGroup: 0
+    parentIndex: -1
+    spriteID: aa3f6911882c91243b63d096ab2b43f4
+    layerID: 0
+    mosaicPosition: {x: 1348, y: 7691}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Happy
+    spriteName: Happy
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 83c54748e4555a548831f038e1794aa2
+    layerID: -2088326552
+    mosaicPosition: {x: 825, y: 7691}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Neutral
+    spriteName: Neutral
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 560e8b58f06cc164cb059335186f4721
+    layerID: -943281943
+    mosaicPosition: {x: 4887, y: 7528}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ponytail
+    spriteName: Ponytail
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 56ef21a3ac8d0f04a82349ecb1782045
+    layerID: 904405436
+    mosaicPosition: {x: 2012, y: 2627}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Braids
+    spriteName: Braids
+    isGroup: 0
+    parentIndex: -1
+    spriteID: e1008c9db642c1e4da1630bef6c2e714
+    layerID: -1140912253
+    mosaicPosition: {x: 2012, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Short
+    spriteName: Short
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 79cc63080734bd945b1a96da6ac74421
+    layerID: 869186504
+    mosaicPosition: {x: 4887, y: 2255}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: 'Normal '
+    spriteName: 'Normal '
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2bbdfafb622c0dd4b8f20982cd73a16e
+    layerID: -708978929
+    mosaicPosition: {x: 2012, y: 5195}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pheromones cloud
+    spriteName: Pheromones cloud
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d233ade78fc459f4f9e97e5dd1c5fd76
+    layerID: 1040121423
+    mosaicPosition: {x: 4, y: 5745}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sweat
+    spriteName: Sweat
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 69d9181b96d92a1429eabc06cba77eb7
+    layerID: 761781670
+    mosaicPosition: {x: 3864, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Body hair
+    spriteName: Body hair
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b1d2b1edf058b3643b6ec13f66ee2862
+    layerID: 1808958538
+    mosaicPosition: {x: 4887, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Big boob belly big
+    spriteName: Big boob belly big
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 85f65de36f380d440af18677126397f1
+    layerID: -1015386228
+    mosaicPosition: {x: 4887, y: 4714}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Belly big
+    spriteName: Belly big
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b1140f5daa8da2f41854605794cb9308
+    layerID: 1676113424
+    mosaicPosition: {x: 4887, y: 1183}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Big boob belly smol
+    spriteName: Big boob belly smol
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 58bbe1c0505df394b9b364bc6c016e7f
+    layerID: -1653454697
+    mosaicPosition: {x: 4887, y: 3985}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Belly smol
+    spriteName: Belly smol
+    isGroup: 0
+    parentIndex: -1
+    spriteID: f1563f51e8e809848bd1bffb13d72886
+    layerID: -1928131185
+    mosaicPosition: {x: 4887, y: 5368}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Penis big
+    spriteName: Penis big
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a272ec851f910d34da958f8e35ed8d5b
+    layerID: -2080667443
+    mosaicPosition: {x: 4887, y: 6161}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Penis Medium
+    spriteName: Penis Medium
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 62995a101f1c6a44ca65cd0b02fa3d72
+    layerID: -1566491300
+    mosaicPosition: {x: 5817, y: 2255}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Penis smol
+    spriteName: Penis smol
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 87bbaad25b31ea14aac725b1d3f9146d
+    layerID: -578154884
+    mosaicPosition: {x: 5289, y: 6161}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Boobs big
+    spriteName: Boobs big
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 883275551dae50c4bbddc83adbb4e121
+    layerID: 1219395363
+    mosaicPosition: {x: 4887, y: 3233}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Boobs Medium
+    spriteName: Boobs Medium
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 941aa265da511814db5810f375870ce0
+    layerID: 1596733364
+    mosaicPosition: {x: 3864, y: 2164}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Boobs smol
+    spriteName: Boobs smol
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 556299f56b8f15d489de89316e72b737
+    layerID: -1219412268
+    mosaicPosition: {x: 4, y: 7691}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Base
+    spriteName: Base
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c5a33bfe0d6560e44b5005de15018ceb
+    layerID: -1966747463
+    mosaicPosition: {x: 4, y: 3012}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: BG
+    spriteName: BG
+    isGroup: 0
+    parentIndex: -1
+    spriteID: fd4d21aaa9ee12e43957dd8c80c5ee82
+    layerID: 428224017
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638580685256311417
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 1
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
