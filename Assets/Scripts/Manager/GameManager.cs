@@ -1,3 +1,4 @@
+using PotionMorph.Map;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,12 +6,15 @@ namespace PotionMorph.Manager
 {
     public class GameManager : MonoBehaviour
     {
+        public static GameManager Instance { private set; get; }
+
         private Camera _cam;
 
-        private Rigidbody2D _follower;
+        private IProp _follower;
 
         private void Awake()
         {
+            Instance = this;
             _cam = Camera.main;
         }
 
@@ -18,7 +22,7 @@ namespace PotionMorph.Manager
         {
             if (_follower != null)
             {
-                _follower.linearVelocity = (_cam.ScreenToWorldPoint(MousePos) - _follower.transform.position) * 10f;
+                _follower.Rigidbody.linearVelocity = (_cam.ScreenToWorldPoint(MousePos) - _follower.Rigidbody.transform.position) * 10f;
             }
         }
 
@@ -29,6 +33,15 @@ namespace PotionMorph.Manager
                 Mouse.current.position.ReadValue();
 #endif
 
+        public void Drop(IProp prop)
+        {
+            if (_follower != null && _follower == prop)
+            {
+                _follower.Rigidbody.gravityScale = 1f;
+                _follower = null;
+            }
+        }
+
         public void OnMousePressed(InputAction.CallbackContext value)
         {
             if (value.phase == InputActionPhase.Performed)
@@ -37,19 +50,16 @@ namespace PotionMorph.Manager
                 var mousePos = MousePos;
                 var ray = _cam.ScreenPointToRay(mousePos);
                 var hit = Physics2D.Raycast(ray.origin, ray.direction, float.MaxValue, LayerMask.GetMask("Prop"));
-                if (hit.collider != null)
+                if (hit.collider != null && hit.collider.TryGetComponent<IProp>(out var prop) && prop.CanGrab)
                 {
-                    _follower = hit.collider.GetComponent<Rigidbody2D>();
-                    _follower.gravityScale = 0f;
+                    _follower = prop;
+                    _follower.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
+                    _follower.Rigidbody.gravityScale = 0f;
                 }
             }
             else if (value.phase == InputActionPhase.Canceled)
             {
-                if (_follower != null)
-                {
-                    _follower.gravityScale = 1f;
-                    _follower = null;
-                }
+                Drop(_follower);
             }
         }
     }
