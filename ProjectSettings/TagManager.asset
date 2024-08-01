@@ -38,6 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Aethra
+    uniqueID: 3694987769
+    locked: 0
+  - name: Table
+    uniqueID: 998307335
+    locked: 0
   - name: Background
     uniqueID: 2195759367
     locked: 0
