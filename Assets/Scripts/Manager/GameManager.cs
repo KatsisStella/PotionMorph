@@ -52,6 +52,11 @@ namespace PotionMorph.Manager
                 var hit = Physics2D.Raycast(ray.origin, ray.direction, float.MaxValue, LayerMask.GetMask("Prop"));
                 if (hit.collider != null && hit.collider.TryGetComponent<IProp>(out var prop) && prop.CanGrab)
                 {
+                    if (prop.AssociatedMachine != null)
+                    {
+                        prop.AssociatedMachine.Unregister(prop);
+                        prop.AssociatedMachine = null;
+                    }
                     _follower = prop;
                     _follower.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
                     _follower.Rigidbody.gravityScale = 0f;
