@@ -13,7 +13,7 @@ TagManager:
   - UI
   - Table
   - Prop
-  - 
+  - Machine
   - 
   - 
   - 
@@ -38,6 +38,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Prop
+    uniqueID: 2707770997
+    locked: 0
+  - name: Container
+    uniqueID: 3398568541
+    locked: 0
+  - name: Machine
+    uniqueID: 233987783
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
