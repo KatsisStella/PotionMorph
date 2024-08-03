@@ -1,0 +1,760 @@
+fileFormatVersion: 2
+guid: c0a8f413a93b74549a28074951a64d31
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 0edceee13cb49ff44b43f3b1abc87ce3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: Living Ink
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1875
+      y: 960
+      width: 762
+      height: 906
+    spriteID: 1f02e08738c2eba42bf544ceb3b11288
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1875, y: 960}
+    spritePosition: {x: 126, y: 27}
+  - name: TetraShard
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 959
+      height: 981
+    spriteID: c906309db21eb5848b260e095bf6db07
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 31, y: 9}
+  - name: Ghost Piece
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 971
+      y: 1930
+      width: 777
+      height: 908
+    spriteID: eea1d3121e3f08f45be0ebe306d9fb2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 971, y: 1930}
+    spritePosition: {x: 121, y: 40}
+  - name: Saliva
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1875
+      y: 2859
+      width: 691
+      height: 934
+    spriteID: 41f968af7f70e39459ad03e64af8e38b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1875, y: 2859}
+    spritePosition: {x: 132, y: 26}
+  - name: Female Juice
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 971
+      y: 2846
+      width: 719
+      height: 975
+    spriteID: 26d39bc6c23903a438ee06b7bba96298
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 971, y: 2846}
+    spritePosition: {x: 150, y: 15}
+  - name: Fractal Fragment
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 993
+      width: 935
+      height: 964
+    spriteID: 85f2286955bd6754eaffcc44f116ebc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 993}
+    spritePosition: {x: 32, y: 5}
+  - name: Pheromones
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 971
+      y: 980
+      width: 800
+      height: 942
+    spriteID: ea377c32d63e29f438ea4c80b05cac2d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 971, y: 980}
+    spritePosition: {x: 98, y: 31}
+  - name: Cum
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3521
+      y: 713
+      width: 491
+      height: 851
+    spriteID: 2ab992a9aead0f4419391a8e132eddfc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3521, y: 713}
+    spritePosition: {x: 265, y: 52}
+  - name: Milk
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2780
+      y: 1578
+      width: 864
+      height: 714
+    spriteID: b6d1d7eddd3849e41981b2ee5f37bcf9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2780, y: 1578}
+    spritePosition: {x: 87, y: 105}
+  - name: Sweat
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2780
+      y: 713
+      width: 733
+      height: 857
+    spriteID: 7a2e1a098da2b53419ce8893950b17e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2780, y: 713}
+    spritePosition: {x: 116, y: 98}
+  - name: Urine
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1875
+      y: 1874
+      width: 703
+      height: 977
+    spriteID: 4b6a3b45a70661348acece2731bf1aac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1875, y: 1874}
+    spritePosition: {x: 167, y: 9}
+  - name: Pubes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2780
+      y: 2300
+      width: 780
+      height: 749
+    spriteID: ec112d531b4d47848ad39e1739e77014
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2780, y: 2300}
+    spritePosition: {x: 95, y: 72}
+  - name: Lemon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2937
+      width: 910
+      height: 963
+    spriteID: 1d64c176c3113df42afe99c16e1e3f04
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 2937}
+    spritePosition: {x: 39, y: 13}
+  - name: Phoenix Feather
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1965
+      width: 931
+      height: 964
+    spriteID: b9cf0119f8385b748a33b1758642e51b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1965}
+    spritePosition: {x: 57, y: 6}
+  - name: Buta Fat
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2780
+      y: 4
+      width: 974
+      height: 701
+    spriteID: 872c81ce2daca584a9b0213fde2ec4d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2780, y: 4}
+    spritePosition: {x: 21, y: 148}
+  - name: Koberry
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 971
+      y: 4
+      width: 896
+      height: 968
+    spriteID: 2f7321bcb9777e848a9d3c2672d522e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 971, y: 4}
+    spritePosition: {x: 102, y: 7}
+  - name: Slime
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2780
+      y: 3057
+      width: 748
+      height: 652
+    spriteID: 797036523f15a4846a7197ef566506dc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2780, y: 3057}
+    spritePosition: {x: 138, y: 157}
+  - name: Cinnamon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1875
+      y: 4
+      width: 897
+      height: 948
+    spriteID: d2af1c354ccee264b98997f014e59a6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1875, y: 4}
+    spritePosition: {x: 33, y: 28}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 100
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: WebGL
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Living Ink
+    spriteName: Living Ink
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1f02e08738c2eba42bf544ceb3b11288
+    layerID: 0
+    mosaicPosition: {x: 1875, y: 960}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: TetraShard
+    spriteName: TetraShard
+    isGroup: 0
+    parentIndex: -1
+    spriteID: c906309db21eb5848b260e095bf6db07
+    layerID: 127823826
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Ghost Piece
+    spriteName: Ghost Piece
+    isGroup: 0
+    parentIndex: -1
+    spriteID: eea1d3121e3f08f45be0ebe306d9fb2d
+    layerID: -776590803
+    mosaicPosition: {x: 971, y: 1930}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Saliva
+    spriteName: Saliva
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 41f968af7f70e39459ad03e64af8e38b
+    layerID: 1074648904
+    mosaicPosition: {x: 1875, y: 2859}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Female Juice
+    spriteName: Female Juice
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 26d39bc6c23903a438ee06b7bba96298
+    layerID: 747724894
+    mosaicPosition: {x: 971, y: 2846}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Fractal Fragment
+    spriteName: Fractal Fragment
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 85f2286955bd6754eaffcc44f116ebc3
+    layerID: -1523062605
+    mosaicPosition: {x: 4, y: 993}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pheromones
+    spriteName: Pheromones
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ea377c32d63e29f438ea4c80b05cac2d
+    layerID: -229386080
+    mosaicPosition: {x: 971, y: 980}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cum
+    spriteName: Cum
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2ab992a9aead0f4419391a8e132eddfc
+    layerID: -1985798693
+    mosaicPosition: {x: 3521, y: 713}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Milk
+    spriteName: Milk
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b6d1d7eddd3849e41981b2ee5f37bcf9
+    layerID: 325351911
+    mosaicPosition: {x: 2780, y: 1578}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Sweat
+    spriteName: Sweat
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 7a2e1a098da2b53419ce8893950b17e7
+    layerID: 761781670
+    mosaicPosition: {x: 2780, y: 713}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Urine
+    spriteName: Urine
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 4b6a3b45a70661348acece2731bf1aac
+    layerID: 1588543353
+    mosaicPosition: {x: 1875, y: 1874}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Pubes
+    spriteName: Pubes
+    isGroup: 0
+    parentIndex: -1
+    spriteID: ec112d531b4d47848ad39e1739e77014
+    layerID: -441422579
+    mosaicPosition: {x: 2780, y: 2300}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Lemon
+    spriteName: Lemon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 1d64c176c3113df42afe99c16e1e3f04
+    layerID: 75901589
+    mosaicPosition: {x: 4, y: 2937}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Phoenix Feather
+    spriteName: Phoenix Feather
+    isGroup: 0
+    parentIndex: -1
+    spriteID: b9cf0119f8385b748a33b1758642e51b
+    layerID: -1027962182
+    mosaicPosition: {x: 4, y: 1965}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Buta Fat
+    spriteName: Buta Fat
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 872c81ce2daca584a9b0213fde2ec4d7
+    layerID: -144700895
+    mosaicPosition: {x: 2780, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Koberry
+    spriteName: Koberry
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 2f7321bcb9777e848a9d3c2672d522e2
+    layerID: -1098548072
+    mosaicPosition: {x: 971, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Slime
+    spriteName: Slime
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 797036523f15a4846a7197ef566506dc
+    layerID: -1355655442
+    mosaicPosition: {x: 2780, y: 3057}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Cinnamon
+    spriteName: Cinnamon
+    isGroup: 0
+    parentIndex: -1
+    spriteID: d2af1c354ccee264b98997f014e59a6c
+    layerID: 1001882251
+    mosaicPosition: {x: 1875, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 638582959224996505
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
