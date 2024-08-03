@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Linq;
+using UnityEngine;
 
 namespace PotionMorph.Map
 {
@@ -7,7 +9,7 @@ namespace PotionMorph.Map
         [SerializeField]
         private Sprite[] _liquidSprite;
 
-        public bool CanGrab { private set; get; } = true;
+        public bool CanGrab { set; get; } = true;
 
         public bool CanReceiveIngredient { private set; get; } = true;
 
@@ -17,6 +19,8 @@ namespace PotionMorph.Map
 
         private Sprite _emptySprite;
 
+        public Ingredient[] Ingredients { private set; get; } = Array.Empty<Ingredient>();
+
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
@@ -24,11 +28,17 @@ namespace PotionMorph.Map
             _emptySprite = _sr.sprite;
         }
 
-        public void Fill(Ingredient ingredient)
+        public void Fill(params Ingredient[] ingredients)
         {
             CanReceiveIngredient = false;
-            _sr.color = ingredient.Color;
-            _sr.sprite = _liquidSprite[(int)ingredient.LiquidState];
+            Color c = ingredients[0].Color;
+            foreach (var curr in ingredients.Skip(1))
+            {
+                c += curr.Color;
+            }
+            _sr.color = c;
+            _sr.sprite = _liquidSprite[Mathf.RoundToInt(ingredients.Sum(x => (float)x.LiquidState) / ingredients.Length)];
+            Ingredients = ingredients;
         }
     }
 }
