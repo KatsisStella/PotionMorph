@@ -13,6 +13,8 @@ namespace PotionMorph.Map
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            if (_contained.Contains(collision.gameObject)) return;
+
             _contained.Add(collision.gameObject);
             OnAdded?.Invoke(collision.gameObject);
         }
