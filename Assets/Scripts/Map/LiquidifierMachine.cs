@@ -4,10 +4,15 @@ using UnityEngine;
 
 namespace PotionMorph.Map
 {
-    public class LiquidifierMachine : AConsumeMachine
+    public class LiquidifierMachine : AConsumeMachine<Ingredient>
     {
         [SerializeField]
         private Transform _slotPos;
+
+        protected override void TreatConsumption(Ingredient ingredient)
+        {
+            _container.Fill(ingredient);
+        }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -27,11 +32,6 @@ namespace PotionMorph.Map
                     Consume(ingredient);
                 }
             }
-        }
-
-        protected override void TreatConsumption(Ingredient ingredient)
-        {
-            _container.Fill(ingredient);
         }
     }
 }
