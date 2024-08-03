@@ -44,7 +44,10 @@ TagManager:
   - name: Table
     uniqueID: 998307335
     locked: 0
-  - name: Background
+  - name: MachineBackground
+    uniqueID: 3836564881
+    locked: 0
+  - name: ContainerBackground
     uniqueID: 2195759367
     locked: 0
   - name: Prop
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Container
     uniqueID: 3398568541
+    locked: 0
+  - name: Liquid
+    uniqueID: 1424465681
     locked: 0
   - name: Machine
     uniqueID: 233987783
