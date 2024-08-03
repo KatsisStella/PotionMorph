@@ -16,7 +16,7 @@ public class Machine : MonoBehaviour, IMachine
         _detector = GetComponentInChildren<Detector>();
         _detector.OnAdded.AddListener((go) => // When an ingredient is added, we check if it was be mixed
         {
-            if (_container != null && go.TryGetComponent<Ingredient>(out var ingredient))
+            if (_container != null && _container.CanReceiveIngredient && go.TryGetComponent<Ingredient>(out var ingredient))
             {
                 Consume(ingredient);
             }
@@ -44,6 +44,7 @@ public class Machine : MonoBehaviour, IMachine
             container.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
             container.Rigidbody.linearVelocity = Vector2.zero;
             container.Rigidbody.transform.position = _slotPos.position;
+            container.AssociatedMachine = this;
             _container = container;
 
             // We put a glass under, is there any ingredient waiting to be mixed?
