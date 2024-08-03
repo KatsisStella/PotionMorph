@@ -15,6 +15,7 @@ namespace PotionMorph.Map
             GameManager.Instance.Drop(ingredient); // Make sure we aren't holding it
             TreatConsumption(ingredient);
             Destroy(ingredient.gameObject);
+            ingredient.IsPendingDeletion = true;
         }
 
         protected abstract void TreatConsumption(TAccept ingredient);
@@ -27,7 +28,7 @@ namespace PotionMorph.Map
 
         protected virtual bool CanTreat(GameObject go, out TAccept output)
         {
-            if (_container != null && _container.CanReceiveIngredient && go.TryGetComponent(out output))
+            if (_container != null && _container.CanReceiveIngredient && go.TryGetComponent(out output) && !output.IsPendingDeletion)
             {
                 return true;
             }

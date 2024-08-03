@@ -14,6 +14,7 @@ namespace PotionMorph.Map
 
         public Rigidbody2D Rigidbody { private set; get; }
         public IMachine AssociatedMachine { set; get; }
+        public bool IsPendingDeletion { set; get; }
 
         private void Awake()
         {
