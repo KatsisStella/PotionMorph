@@ -8,6 +8,9 @@ namespace PotionMorph.Manager
     {
         public static GameManager Instance { private set; get; }
 
+        [SerializeField]
+        private Animator _previewAnim;
+
         private Camera _cam;
 
         private IProp _follower;
@@ -24,6 +27,12 @@ namespace PotionMorph.Manager
             {
                 _follower.Rigidbody.linearVelocity = (_cam.ScreenToWorldPoint(MousePos) - _follower.Rigidbody.transform.position) * 10f;
             }
+        }
+
+        public void PlayPreviewAnim()
+        {
+            _previewAnim.gameObject.SetActive(true);
+            _previewAnim.SetTrigger("Run");
         }
 
         private Vector2 MousePos =>
