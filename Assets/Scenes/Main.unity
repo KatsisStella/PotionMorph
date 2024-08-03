@@ -2444,6 +2444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1373865495}
   - component: {fileID: 1373865496}
+  - component: {fileID: 1373865497}
   m_Layer: 9
   m_Name: AethraCollider
   m_TagString: Untagged
@@ -2512,6 +2513,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.26, y: 5.3728666}
   m_EdgeRadius: 0
+--- !u!114 &1373865497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373865494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82606ecbc22ec3546ac03fac4a18cd97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423303138
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using PotionMorph.Map;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -33,6 +34,13 @@ namespace PotionMorph.Manager
         {
             _previewAnim.gameObject.SetActive(true);
             _previewAnim.SetTrigger("Run");
+            StartCoroutine(HideAnimation());
+        }
+
+        private IEnumerator HideAnimation()
+        {
+            yield return new WaitForSeconds(1f);
+            _previewAnim.gameObject.SetActive(false);
         }
 
         private Vector2 MousePos =>

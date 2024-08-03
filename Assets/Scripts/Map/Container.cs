@@ -40,5 +40,12 @@ namespace PotionMorph.Map
             _liquid.gameObject.SetActive(true);
             Ingredients = ingredients;
         }
+
+        public void Empty()
+        {
+            _liquid.gameObject.SetActive(false);
+            Ingredients = Array.Empty<Ingredient>();
+            CanReceiveIngredient = true;
+        }
     }
 }
