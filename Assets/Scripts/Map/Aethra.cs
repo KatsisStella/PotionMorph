@@ -7,10 +7,14 @@ namespace PotionMorph.Map
     {
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.TryGetComponent<Container>(out var container) && container.Ingredients.Length >= 3)
+            if (collision.CompareTag("Spatula"))
             {
-                container.Empty();
-                GameManager.Instance.PlayPreviewAnim();
+                var spatula = collision.GetComponent<Container>();
+                if (spatula.Ingredients.Length >= 3)
+                {
+                    spatula.Empty();
+                    GameManager.Instance.PlayPreviewAnim();
+                }
             }
         }
     }
