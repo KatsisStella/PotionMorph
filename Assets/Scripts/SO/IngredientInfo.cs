@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using PotionMorph.Map;
+using UnityEngine;
 
 namespace PotionMorph.SO
 {
@@ -6,6 +7,9 @@ namespace PotionMorph.SO
     public class IngredientInfo : ScriptableObject
     {
         public string Name;
+
+        public LiquidState LiquidState;
+        public Color Color;
 
         public string SingleAdjective;
         public string TwoAdjective;

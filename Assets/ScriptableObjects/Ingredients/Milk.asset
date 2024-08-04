@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
-  m_Name: Lemon
+  m_Name: Milk
   m_EditorClassIdentifier: 
-  Name: Lemon
+  Name: Milk
   LiquidState: 0
-  Color: {r: 0.97777355, g: 1, b: 0.08962262, a: 1}
-  SingleAdjective: lemon juice
-  TwoAdjective: Lemon flavored
-  ThreeName: Lemonade
+  Color: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 1}
+  SingleAdjective: milk
+  TwoAdjective: Milky
+  ThreeName: Sour cream

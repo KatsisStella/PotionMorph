@@ -6,12 +6,10 @@ namespace PotionMorph.Map
     public class Ingredient : MonoBehaviour, IProp
     {
         [SerializeField] private IngredientInfo _info;
-        [SerializeField] private LiquidState _liquidState;
-        [SerializeField] private Color _color;
 
         public IngredientInfo Info => _info;
-        public LiquidState LiquidState => _liquidState;
-        public Color Color => _color;
+        public LiquidState LiquidState => _info.LiquidState;
+        public Color Color => _info.Color;
 
         public bool CanGrab => true;
 

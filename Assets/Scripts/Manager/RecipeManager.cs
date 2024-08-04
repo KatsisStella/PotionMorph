@@ -13,6 +13,9 @@ namespace PotionMorph.Manager
         [SerializeField]
         private TMP_Text _recipeText, _recipeEffect;
 
+        [SerializeField]
+        private RecipeInfo[] _recipes;
+
         private void Awake()
         {
             Instance = this;
@@ -33,7 +36,15 @@ namespace PotionMorph.Manager
             }
             else
             {
-                _recipeText.text = "Unidentified mix";
+                var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => i.Name == x.Name));
+                if (targetRecipe != null)
+                {
+                    _recipeEffect.text = targetRecipe.Name;
+                }
+                else
+                {
+                    _recipeText.text = "Unidentified mix";
+                }
             }
 
             StartCoroutine(RemoveRecipeText());
