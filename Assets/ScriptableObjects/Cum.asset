@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Cum
   m_EditorClassIdentifier: 
   Name: Cum
+  SingleAdjective: cum
   TwoAdjective: Sticky
   ThreeName: Cum soup

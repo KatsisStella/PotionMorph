@@ -7,6 +7,7 @@ namespace PotionMorph.SO
     {
         public string Name;
 
+        public string SingleAdjective;
         public string TwoAdjective;
         public string ThreeName;
     }

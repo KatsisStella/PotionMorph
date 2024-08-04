@@ -9,6 +9,7 @@ namespace PotionMorph.Map
         [SerializeField] private LiquidState _liquidState;
         [SerializeField] private Color _color;
 
+        public IngredientInfo Info => _info;
         public LiquidState LiquidState => _liquidState;
         public Color Color => _color;
 

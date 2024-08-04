@@ -1,4 +1,5 @@
 ﻿using PotionMorph.Manager;
+using System.Linq;
 using UnityEngine;
 
 namespace PotionMorph.Map
@@ -12,6 +13,7 @@ namespace PotionMorph.Map
                 var spatula = collision.GetComponent<Container>();
                 if (spatula.Ingredients.Length >= 3)
                 {
+                    RecipeManager.Instance.LoadRecipe(spatula.Ingredients.Select(x => x.Info).ToArray());
                     spatula.Empty();
                     GameManager.Instance.PlayPreviewAnim();
                 }

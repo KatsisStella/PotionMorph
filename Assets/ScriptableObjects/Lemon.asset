@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Lemon
   m_EditorClassIdentifier: 
   Name: Lemon
+  SingleAdjective: lemon juice
   TwoAdjective: Lemon flavored
   ThreeName: Lemonade
