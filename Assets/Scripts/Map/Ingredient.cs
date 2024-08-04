@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using PotionMorph.SO;
+using UnityEngine;
 
 namespace PotionMorph.Map
 {
     public class Ingredient : MonoBehaviour, IProp
     {
+        [SerializeField] private IngredientInfo _info;
         [SerializeField] private LiquidState _liquidState;
         [SerializeField] private Color _color;
 
