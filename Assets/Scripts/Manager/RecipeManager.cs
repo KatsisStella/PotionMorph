@@ -25,6 +25,7 @@ namespace PotionMorph.Manager
         {
             _recipeText.gameObject.SetActive(true);
 
+            Debug.Log($"Got recipe with {string.Join(", ", ingredients.Select(x => x.Name))}");
             if (ingredients.Distinct().Count() == 1)
             {
                 _recipeText.text = ingredients[0].ThreeName;
@@ -36,7 +37,7 @@ namespace PotionMorph.Manager
             }
             else
             {
-                var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => i.Name == x.Name));
+                var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => ingredients.Contains(i)));
                 if (targetRecipe != null)
                 {
                     _recipeEffect.text = targetRecipe.Name;
