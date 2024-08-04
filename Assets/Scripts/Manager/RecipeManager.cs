@@ -11,7 +11,7 @@ namespace PotionMorph.Manager
         public static RecipeManager Instance { private set; get; }
 
         [SerializeField]
-        private TMP_Text _recipeText;
+        private TMP_Text _recipeText, _recipeEffect;
 
         private void Awake()
         {
@@ -43,6 +43,7 @@ namespace PotionMorph.Manager
         {
             yield return new WaitForSeconds(3f);
             _recipeText.gameObject.SetActive(false);
+            _recipeEffect.gameObject.SetActive(false);
         }
     }
 }
