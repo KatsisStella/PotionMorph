@@ -40,7 +40,7 @@ namespace PotionMorph.Manager
                 var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => ingredients.Contains(i)));
                 if (targetRecipe != null)
                 {
-                    _recipeEffect.text = targetRecipe.Name;
+                    _recipeText.text = targetRecipe.Name;
                 }
                 else
                 {
