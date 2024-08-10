@@ -6,6 +6,9 @@ namespace PotionMorph.Map
 {
     public class Aethra : MonoBehaviour
     {
+        [SerializeField]
+        private RuntimeAnimatorController _drinking;
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.CompareTag("Spatula"))
@@ -15,7 +18,7 @@ namespace PotionMorph.Map
                 {
                     RecipeManager.Instance.LoadRecipe(spatula.Ingredients.Select(x => x.Info).ToArray());
                     spatula.Empty();
-                    GameManager.Instance.PlayPreviewAnim();
+                    GameManager.Instance.PlayPreviewAnim(_drinking);
                 }
             }
         }

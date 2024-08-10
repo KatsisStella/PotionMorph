@@ -2010,6 +2010,10 @@ MonoBehaviour:
   - {fileID: 929469434}
   - {fileID: 1117599130}
   - {fileID: 1088231556}
+  _cumAnim: {fileID: 22100000, guid: d9587d44fff744b4487130fe1d50b598, type: 2}
+  _milkAnim: {fileID: 22100000, guid: c568776a2b4dc2049a91419361fb1906, type: 2}
+  _cum: {fileID: 1009876470984491368, guid: ee74163f9e82e3e4b8417bed35c1a031, type: 3}
+  _milk: {fileID: 7574146299150823602, guid: afc0a3f3bb24a5445b1aa110b8960cc9, type: 3}
 --- !u!1001 &904013268
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2537,7 +2541,7 @@ Animator:
   m_GameObject: {fileID: 982036220}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68690589c89f37740a5b6433810d35db, type: 2}
+  m_Controller: {fileID: 9100000, guid: b98f0d7ec20bd154e9a5344e1655c95f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -3086,6 +3090,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82606ecbc22ec3546ac03fac4a18cd97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _drinking: {fileID: 9100000, guid: 68690589c89f37740a5b6433810d35db, type: 2}
 --- !u!1 &1423303138
 GameObject:
   m_ObjectHideFlags: 0

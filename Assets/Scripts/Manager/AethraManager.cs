@@ -21,8 +21,17 @@ namespace PotionMorph.Manager
         [SerializeField]
         private GameObject[] _boobs, _penises;
 
+        [SerializeField]
+        private RuntimeAnimatorController _cumAnim, _milkAnim;
+
+        [SerializeField]
+        private GameObject _cum, _milk;
+
         private Size _currentBreast = Size.Medium;
         private Size? _currentPenis;
+
+        private bool CanMilk => _currentBreast == Size.Big;
+        private bool CanTakeCum => _currentPenis != null;
 
         private void Awake()
         {
@@ -81,6 +90,9 @@ namespace PotionMorph.Manager
         public void ShowChoices()
         {
             RemoveAllChoices();
+
+            if (CanMilk) AddChoice("Milking", () => { RecipeManager.Instance.SpawnIngredient(_milk); GameManager.Instance.PlayPreviewAnim(_milkAnim); });
+            if (CanTakeCum) AddChoice("Jacking", () => { RecipeManager.Instance.SpawnIngredient(_cum); GameManager.Instance.PlayPreviewAnim(_cumAnim); });
 
             AddChoice("Cancel", RemoveAllChoices);
         }

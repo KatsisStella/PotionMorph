@@ -30,8 +30,9 @@ namespace PotionMorph.Manager
             }
         }
 
-        public void PlayPreviewAnim()
+        public void PlayPreviewAnim(RuntimeAnimatorController clip)
         {
+            _previewAnim.runtimeAnimatorController = clip;
             _previewAnim.gameObject.SetActive(true);
             _previewAnim.SetTrigger("Run");
             StartCoroutine(HideAnimation());
