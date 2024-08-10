@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -20,7 +20,11 @@ namespace PotionMorph.Map
         public IMachine AssociatedMachine { set; get; }
         public bool IsPendingDeletion { set; get; }
 
-        public Ingredient[] Ingredients { private set; get; } = Array.Empty<Ingredient>();
+        private readonly List<Ingredient> _ingredients = new();
+        public bool HasAny => _ingredients.Any();
+        public bool HasAtLeast(int number) => _ingredients.Count >= number;
+        public int IngredientCount => _ingredients.Count;
+        public IReadOnlyList<Ingredient> GetAllIngredients() => _ingredients.AsReadOnly();
 
         private void Awake()
         {
@@ -32,24 +36,24 @@ namespace PotionMorph.Map
             if (transform.position.y < -10f) Destroy(gameObject);
         }
 
-        public void Fill(params Ingredient[] ingredients)
+        public void Fill(params Ingredient[] newIngredients)
         {
             CanReceiveIngredient = false;
-            Color c = ingredients[0].Color;
-            foreach (var curr in ingredients.Skip(1))
+            Color c = newIngredients[0].Color;
+            foreach (var curr in newIngredients.Skip(1))
             {
                 c += curr.Color;
             }
-            _liquid.color = c / ingredients.Length;
-            _liquid.sprite = _liquidSprite[Mathf.RoundToInt(ingredients.Sum(x => (float)x.LiquidState) / ingredients.Length)];
+            _liquid.color = c / newIngredients.Length;
+            _liquid.sprite = _liquidSprite[Mathf.RoundToInt(newIngredients.Sum(x => (float)x.LiquidState) / newIngredients.Length)];
             _liquid.gameObject.SetActive(true);
-            Ingredients = ingredients;
+            _ingredients.AddRange(newIngredients);
         }
 
         public void Empty()
         {
             _liquid.gameObject.SetActive(false);
-            Ingredients = Array.Empty<Ingredient>();
+            _ingredients.Clear();
             CanReceiveIngredient = true;
         }
     }

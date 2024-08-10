@@ -1,5 +1,4 @@
-﻿using System;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +7,9 @@ namespace PotionMorph.Manager
     public class AethraManager : MonoBehaviour
     {
         public static AethraManager Instance { private set; get; }
+
+        [SerializeField]
+        private GameObject _aethraTriggerArea;
 
         [SerializeField]
         private Transform _choiceContainer;
@@ -80,7 +82,7 @@ namespace PotionMorph.Manager
             }
         }
 
-        private void AddChoice(string text, Action action)
+        private void AddChoice(string text, System.Action action)
         {
             var go = Instantiate(_choicePrefab, _choiceContainer);
             go.GetComponentInChildren<TMP_Text>().text = text;
@@ -89,12 +91,13 @@ namespace PotionMorph.Manager
 
         public void ShowChoices()
         {
+            _aethraTriggerArea.SetActive(false);
             RemoveAllChoices();
 
-            if (CanMilk) AddChoice("Milking", () => { RecipeManager.Instance.SpawnIngredient(_milk); GameManager.Instance.PlayPreviewAnim(_milkAnim); });
-            if (CanTakeCum) AddChoice("Jacking", () => { RecipeManager.Instance.SpawnIngredient(_cum); GameManager.Instance.PlayPreviewAnim(_cumAnim); });
+            if (CanMilk) AddChoice("Milking", () => { RecipeManager.Instance.SpawnIngredient(_milk); GameManager.Instance.PlayPreviewAnim(_milkAnim); RemoveAllChoices(); });
+            if (CanTakeCum) AddChoice("Jacking", () => { RecipeManager.Instance.SpawnIngredient(_cum); GameManager.Instance.PlayPreviewAnim(_cumAnim); RemoveAllChoices(); });
 
-            AddChoice("Cancel", RemoveAllChoices);
+            AddChoice("Cancel", () => { _aethraTriggerArea.SetActive(true); RemoveAllChoices(); });
         }
 
         public enum Size

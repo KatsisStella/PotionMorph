@@ -14,9 +14,9 @@ namespace PotionMorph.Map
             if (collision.CompareTag("Spatula"))
             {
                 var spatula = collision.GetComponent<Container>();
-                if (spatula.Ingredients.Length >= 3)
+                if (spatula.HasAtLeast(3))
                 {
-                    RecipeManager.Instance.LoadRecipe(spatula.Ingredients.Select(x => x.Info).ToArray());
+                    RecipeManager.Instance.LoadRecipe(spatula.GetAllIngredients().Select(x => x.Info).ToArray());
                     spatula.Empty();
                     GameManager.Instance.PlayPreviewAnim(_drinking);
                 }

@@ -1998,6 +1998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eda40305913e7264f930bc81af909c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _aethraTriggerArea: {fileID: 1373865494}
   _choiceContainer: {fileID: 1755144721}
   _choicePrefab: {fileID: 4411839247911610479, guid: ffb258b648f4c7a4c8278d91c0ef0986, type: 3}
   _boobsContainer: {fileID: 2137664405}

@@ -23,7 +23,7 @@ namespace PotionMorph.Map
             // Put back spatula on the cauldron
             _detector.OnAdded.AddListener((go) =>
             {
-                if (go.CompareTag("Spatula"))
+                if (go.CompareTag("Spatula") && !go.GetComponent<Container>().HasAny)
                 {
                     _spatula.Rigidbody.linearVelocity = Vector2.zero;
                     _spatula.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
@@ -48,18 +48,19 @@ namespace PotionMorph.Map
             return base.CanTreat(go, out output) &&
                 _spatula.AssociatedMachine != null && // We only add things on the cauldron if the spatula is there
                 !go.CompareTag("Spatula") && // The spatula can't count as an ingredient
-                output.Ingredients.Any(); // We are not interested in empty containers
+                output.HasAny; // We are not interested in empty containers
         }
 
         protected override void TreatConsumption(Container ingredient)
         {
-            if (!ingredient.Ingredients.Any()) return;
+            if (!ingredient.HasAny) return;
 
-            Debug.Log($"Adding {ingredient.name} to cauldron (+{ingredient.Ingredients.Length})");
+            Debug.Log($"Adding {ingredient.name} to cauldron (+{ingredient.IngredientCount})");
             _ingredients.Add(ingredient);
-            if (_ingredients.Sum(x => x.Ingredients.Length) >= 3)
+            if (_ingredients.Sum(x => x.IngredientCount) >= 3)
             {
-                _spatula.Fill(_ingredients.SelectMany(x => x.Ingredients).ToArray());
+                _spatula.Fill(_ingredients.SelectMany(x => x.GetAllIngredients()).ToArray());
+                _ingredients.Clear();
                 _spatula.CanGrab = true;
             }
         }
