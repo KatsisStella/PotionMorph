@@ -21,6 +21,11 @@ namespace PotionMorph.Manager
             Instance = this;
         }
 
+        public void SpawnIngredient(GameObject ingredient)
+        {
+            Instantiate(ingredient, Vector3.zero, Quaternion.identity);
+        }
+
         public void LoadRecipe(IngredientInfo[] ingredients)
         {
             _recipeText.gameObject.SetActive(true);
