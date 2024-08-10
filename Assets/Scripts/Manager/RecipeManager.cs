@@ -23,7 +23,7 @@ namespace PotionMorph.Manager
 
         public void SpawnIngredient(GameObject ingredient)
         {
-            Instantiate(ingredient, Vector3.zero, Quaternion.identity);
+            Instantiate(ingredient, Vector3.zero, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
         }
 
         public void LoadRecipe(IngredientInfo[] ingredients)
