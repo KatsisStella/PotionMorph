@@ -76,6 +76,7 @@ namespace PotionMorph.Manager
 
         private void RemoveAllChoices()
         {
+            _aethraTriggerArea.SetActive(true);
             for (int i = 0; i < _choiceContainer.childCount; i++)
             {
                 Destroy(_choiceContainer.GetChild(i).gameObject);
@@ -91,8 +92,8 @@ namespace PotionMorph.Manager
 
         public void ShowChoices()
         {
-            _aethraTriggerArea.SetActive(false);
             RemoveAllChoices();
+            _aethraTriggerArea.SetActive(false);
 
             if (CanMilk) AddChoice("Milking", () => { RecipeManager.Instance.SpawnIngredient(_milk); GameManager.Instance.PlayPreviewAnim(_milkAnim); RemoveAllChoices(); });
             if (CanTakeCum) AddChoice("Jacking", () => { RecipeManager.Instance.SpawnIngredient(_cum); GameManager.Instance.PlayPreviewAnim(_cumAnim); RemoveAllChoices(); });
