@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace PotionMorph.SO
 {
@@ -8,5 +9,15 @@ namespace PotionMorph.SO
         public string Name;
 
         public IngredientInfo[] Ingredients;
+
+        public RecipeEffect Effect;
+    }
+
+    public enum RecipeEffect
+    {
+        None,
+        GrowAll,
+        ReduceAll,
+        AddPenis
     }
 }

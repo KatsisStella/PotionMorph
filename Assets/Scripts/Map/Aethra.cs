@@ -19,5 +19,10 @@ namespace PotionMorph.Map
                 }
             }
         }
+
+        private void OnMouseUpAsButton()
+        {
+            AethraManager.Instance.ShowChoices();
+        }
     }
 }
