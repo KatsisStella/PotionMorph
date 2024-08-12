@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40858894d2d6ea43a151984dcd4192a, type: 3}
   m_Name: Koberrynade
   m_EditorClassIdentifier: 
-  Name: Koberrynade
+  Name: Agrum tea
   Ingredients:
   - {fileID: 11400000, guid: 4cb337cb1a1dd124799413a5ff49fa8d, type: 2}
-  - {fileID: 11400000, guid: 4cb337cb1a1dd124799413a5ff49fa8d, type: 2}
-  - {fileID: 11400000, guid: 4cb337cb1a1dd124799413a5ff49fa8d, type: 2}
-  Effect: 1
+  - {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
+  - {fileID: 11400000, guid: bcf25cfa734618d4a9387c74260ddc9f, type: 2}
+  Effect: 2
