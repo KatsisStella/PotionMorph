@@ -1,4 +1,5 @@
-﻿using PotionMorph.SO;
+﻿using PotionMorph.Persistency;
+using PotionMorph.SO;
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -16,14 +17,23 @@ namespace PotionMorph.Manager
         [SerializeField]
         private RecipeInfo[] _recipes;
 
+        [SerializeField]
+        private TMP_Text _importantRecipes;
+
         private void Awake()
         {
             Instance = this;
+            UpdateRecipeDisplay();
         }
 
         public void SpawnIngredient(GameObject ingredient)
         {
             Instantiate(ingredient, Vector3.zero, Quaternion.Euler(0f, 0f, Random.Range(0f, 360f)));
+        }
+
+        private void UpdateRecipeDisplay()
+        {
+            _importantRecipes.text = string.Join("\n", PersistencyManager.Instance.SaveData.DiscoveredRecipes.OrderBy(x => x));
         }
 
         public void LoadRecipe(IngredientInfo[] ingredients)
@@ -32,27 +42,35 @@ namespace PotionMorph.Manager
 
             Debug.Log($"Got recipe with {string.Join(", ", ingredients.Select(x => x.Name))}");
             var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => ingredients.Contains(i)));
+
             if (targetRecipe != null)
             {
+                if (!PersistencyManager.Instance.SaveData.DiscoveredRecipes.Contains(targetRecipe.Name))
+                {
+                    PersistencyManager.Instance.SaveData.DiscoveredRecipes.Add(targetRecipe.Name);
+                    UpdateRecipeDisplay();
+                }
+
                 _recipeText.text = targetRecipe.Name;
                 switch (targetRecipe.Effect)
                 {
                     case RecipeEffect.None: break;
 
                     case RecipeEffect.ReduceAll:
-                        AethraManager.Instance.ReduceAll();
+                        PersistencyManager.Instance.SaveData.ReduceAll();
                         break;
 
                     case RecipeEffect.GrowAll:
-                        AethraManager.Instance.GrowAll();
+                        PersistencyManager.Instance.SaveData.GrowAll();
                         break;
 
                     case RecipeEffect.AddPenis:
-                        AethraManager.Instance.AddPenis();
+                        PersistencyManager.Instance.SaveData.AddPenis();
                         break;
 
                     default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
                 }
+                AethraManager.Instance.UpdateAethra();
             }
             else if (ingredients.Distinct().Count() == 1)
             {

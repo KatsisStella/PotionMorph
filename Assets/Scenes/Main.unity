@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 267168621}
   - component: {fileID: 267168620}
   m_Layer: 5
-  m_Name: Content
+  m_Name: RecipeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2159,6 +2159,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7cf41786101a1cd448fc57238d6efd43, type: 2}
   - {fileID: 11400000, guid: 08533984d3d222645a5fd2eacb94ffc5, type: 2}
   - {fileID: 11400000, guid: 94ff805a80ede6840882f7eaa4df5725, type: 2}
+  _importantRecipes: {fileID: 267168620}
 --- !u!114 &844083765
 MonoBehaviour:
   m_ObjectHideFlags: 0

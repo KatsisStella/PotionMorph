@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using PotionMorph.Persistency;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,44 +30,17 @@ namespace PotionMorph.Manager
         [SerializeField]
         private GameObject _cum, _milk;
 
-        private Size _currentBreast = Size.Medium;
-        private Size? _currentPenis;
-        private Size _currentHair = Size.Big;
-
-        private bool CanMilk => _currentBreast == Size.Big;
-        private bool CanTakeCum => _currentPenis != null;
+        private bool CanMilk => PersistencyManager.Instance.SaveData.CurrentBreast == Size.Big;
+        private bool CanTakeCum => PersistencyManager.Instance.SaveData.CurrentPenis != null;
 
         private void Awake()
         {
             Instance = this;
-        }
-
-        public void GrowAll()
-        {
-            if (_currentBreast < Size.Big) _currentBreast++;
-            if (_currentPenis != null && _currentPenis < Size.Big) _currentPenis++;
-            if (_currentHair < Size.Big) _currentHair++;
 
             UpdateAethra();
         }
 
-        public void AddPenis()
-        {
-            if (_currentPenis == null) _currentPenis = Size.Medium;
-
-            UpdateAethra();
-        }
-
-        public void ReduceAll()
-        {
-            if (_currentBreast > Size.Small) _currentBreast--;
-            if (_currentPenis != null && _currentPenis > Size.Small) _currentPenis--;
-            if (_currentHair > Size.Medium) _currentHair--;
-
-            UpdateAethra();
-        }
-
-        private void UpdateAethra()
+        public void UpdateAethra()
         {
             // Disable all
             for (int i = 0; i < _boobsContainer.childCount; i++) _boobsContainer.GetChild(i).gameObject.SetActive(false);
@@ -75,10 +49,11 @@ namespace PotionMorph.Manager
             for (int i = 0; i < _backHairContainer.childCount; i++) _backHairContainer.GetChild(i).gameObject.SetActive(false);
 
             // Spawn things
-            _boobs[(int)_currentBreast].SetActive(true);
-            if (_currentPenis != null) _penises[(int)_currentPenis].SetActive(true);
-            _frontHairs[(int)_currentHair - 1].SetActive(true);
-            _backHairs[(int)_currentHair - 1].SetActive(true);
+            var sd = PersistencyManager.Instance.SaveData;
+            _boobs[(int)sd.CurrentBreast].SetActive(true);
+            if (sd.CurrentPenis != null) _penises[(int)sd.CurrentPenis].SetActive(true);
+            _frontHairs[(int)sd.CurrentHair - 1].SetActive(true);
+            _backHairs[(int)sd.CurrentHair - 1].SetActive(true);
         }
 
         private void RemoveAllChoices()
@@ -106,13 +81,6 @@ namespace PotionMorph.Manager
             if (CanTakeCum) AddChoice("Jacking", () => { RecipeManager.Instance.SpawnIngredient(_cum); GameManager.Instance.PlayPreviewAnim(_cumAnim); RemoveAllChoices(); });
 
             AddChoice("Cancel", () => { _aethraTriggerArea.SetActive(true); RemoveAllChoices(); });
-        }
-
-        public enum Size
-        {
-            Small,
-            Medium,
-            Big
         }
     }
 }
