@@ -1484,6 +1484,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: -599979527
       objectReference: {fileID: 0}
+    - target: {fileID: 2884898618271546230, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2947013209649122872, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -1621,6 +1625,36 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 4843985084834002234, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+--- !u!1 &702778582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2884898618271546230, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &702778583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1930068268637045470, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &702778584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6320782276789747474, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &702778585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5112462135703176933, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &702778586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 384845090738868285, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &702778587 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8936128491857153409, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &714427845
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1903,8 @@ MonoBehaviour:
   _choicePrefab: {fileID: 4411839247911610479, guid: ffb258b648f4c7a4c8278d91c0ef0986, type: 3}
   _boobsContainer: {fileID: 2137664405}
   _penisesContainer: {fileID: 1850060161}
+  _frontHairContainer: {fileID: 702778587}
+  _backHairContainer: {fileID: 702778586}
   _boobs:
   - {fileID: 333145056}
   - {fileID: 150978082}
@@ -1877,6 +1913,12 @@ MonoBehaviour:
   - {fileID: 929469434}
   - {fileID: 1117599130}
   - {fileID: 1088231556}
+  _frontHairs:
+  - {fileID: 702778585}
+  - {fileID: 702778584}
+  _backHairs:
+  - {fileID: 702778583}
+  - {fileID: 702778582}
   _cumAnim: {fileID: 22100000, guid: d9587d44fff744b4487130fe1d50b598, type: 2}
   _milkAnim: {fileID: 22100000, guid: c568776a2b4dc2049a91419361fb1906, type: 2}
   _cum: {fileID: 1009876470984491368, guid: ee74163f9e82e3e4b8417bed35c1a031, type: 3}

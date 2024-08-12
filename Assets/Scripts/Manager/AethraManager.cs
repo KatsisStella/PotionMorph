@@ -18,10 +18,10 @@ namespace PotionMorph.Manager
         private GameObject _choicePrefab;
 
         [SerializeField]
-        private Transform _boobsContainer, _penisesContainer;
+        private Transform _boobsContainer, _penisesContainer, _frontHairContainer, _backHairContainer;
 
         [SerializeField]
-        private GameObject[] _boobs, _penises;
+        private GameObject[] _boobs, _penises, _frontHairs, _backHairs;
 
         [SerializeField]
         private RuntimeAnimatorController _cumAnim, _milkAnim;
@@ -31,6 +31,7 @@ namespace PotionMorph.Manager
 
         private Size _currentBreast = Size.Medium;
         private Size? _currentPenis;
+        private Size _currentHair = Size.Big;
 
         private bool CanMilk => _currentBreast == Size.Big;
         private bool CanTakeCum => _currentPenis != null;
@@ -44,6 +45,7 @@ namespace PotionMorph.Manager
         {
             if (_currentBreast < Size.Big) _currentBreast++;
             if (_currentPenis != null && _currentPenis < Size.Big) _currentPenis++;
+            if (_currentHair < Size.Big) _currentHair++;
 
             UpdateAethra();
         }
@@ -59,6 +61,7 @@ namespace PotionMorph.Manager
         {
             if (_currentBreast > Size.Small) _currentBreast--;
             if (_currentPenis != null && _currentPenis > Size.Small) _currentPenis--;
+            if (_currentHair > Size.Medium) _currentHair--;
 
             UpdateAethra();
         }
@@ -68,10 +71,14 @@ namespace PotionMorph.Manager
             // Disable all
             for (int i = 0; i < _boobsContainer.childCount; i++) _boobsContainer.GetChild(i).gameObject.SetActive(false);
             for (int i = 0; i < _penisesContainer.childCount; i++) _penisesContainer.GetChild(i).gameObject.SetActive(false);
+            for (int i = 0; i < _frontHairContainer.childCount; i++) _frontHairContainer.GetChild(i).gameObject.SetActive(false);
+            for (int i = 0; i < _backHairContainer.childCount; i++) _backHairContainer.GetChild(i).gameObject.SetActive(false);
 
             // Spawn things
             _boobs[(int)_currentBreast].SetActive(true);
             if (_currentPenis != null) _penises[(int)_currentPenis].SetActive(true);
+            _frontHairs[(int)_currentHair - 1].SetActive(true);
+            _backHairs[(int)_currentHair - 1].SetActive(true);
         }
 
         private void RemoveAllChoices()
