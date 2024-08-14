@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cinnamon Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4182620387317420609, guid: bbf07406bd7ef5f499251228a8da7c7d, type: 3}
+      propertyPath: _info
+      value: 
+      objectReference: {fileID: 11400000, guid: bcf25cfa734618d4a9387c74260ddc9f, type: 2}
     - target: {fileID: 7526455976926679051, guid: bbf07406bd7ef5f499251228a8da7c7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.5786793

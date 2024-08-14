@@ -13,6 +13,10 @@ PrefabInstance:
       value: Cum Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1590761785652550484, guid: 580467c2be4d67340b0b2fefd169bebc, type: 3}
+      propertyPath: _info
+      value: 
+      objectReference: {fileID: 11400000, guid: e6b45182ef7fe45428ac8c63413c8ac9, type: 2}
+    - target: {fileID: 1590761785652550484, guid: 580467c2be4d67340b0b2fefd169bebc, type: 3}
       propertyPath: _color.a
       value: 0.7882353
       objectReference: {fileID: 0}
