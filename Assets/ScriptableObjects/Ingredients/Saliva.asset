@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
   m_Name: Saliva
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Saliva
   LiquidState: 1
   Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
-  SingleAdjective: 
-  TwoAdjective: 
-  ThreeName: 
+  SingleAdjective: lubed
+  TwoAdjective: Tongue extract
+  ThreeName: Glass of drool
