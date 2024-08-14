@@ -1214,6 +1214,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549216686}
   m_CullTransparentMesh: 1
+--- !u!4 &578170045 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1448494013813838991, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &578170046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4537256026588875314, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &578170047 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -2958396329843479043, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &598998381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,6 +1685,10 @@ PrefabInstance:
     - target: {fileID: -3339985826043508898, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2093844495798543767, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -1930068268637045470, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
       propertyPath: m_IsActive
@@ -2341,6 +2360,9 @@ MonoBehaviour:
   _penisesContainer: {fileID: 1850060161}
   _frontHairContainer: {fileID: 702778587}
   _backHairContainer: {fileID: 702778586}
+  _expressionsContainer: {fileID: 578170047}
+  _bellyBoobsContainer: {fileID: 578170046}
+  _extraContainer: {fileID: 578170045}
   _boobs:
   - {fileID: 333145056}
   - {fileID: 150978082}

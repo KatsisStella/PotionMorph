@@ -19,7 +19,7 @@ namespace PotionMorph.Manager
         private GameObject _choicePrefab;
 
         [SerializeField]
-        private Transform _boobsContainer, _penisesContainer, _frontHairContainer, _backHairContainer;
+        private Transform[] _containers;
 
         [SerializeField]
         private GameObject[] _boobs, _penises, _frontHairs, _backHairs;
@@ -43,17 +43,17 @@ namespace PotionMorph.Manager
         public void UpdateAethra()
         {
             // Disable all
-            for (int i = 0; i < _boobsContainer.childCount; i++) _boobsContainer.GetChild(i).gameObject.SetActive(false);
-            for (int i = 0; i < _penisesContainer.childCount; i++) _penisesContainer.GetChild(i).gameObject.SetActive(false);
-            for (int i = 0; i < _frontHairContainer.childCount; i++) _frontHairContainer.GetChild(i).gameObject.SetActive(false);
-            for (int i = 0; i < _backHairContainer.childCount; i++) _backHairContainer.GetChild(i).gameObject.SetActive(false);
+            foreach (var c in _containers)
+            {
+                for (int i = 0; i < c.childCount; i++) c.GetChild(i).gameObject.SetActive(false);
+            }
 
             // Spawn things
             var sd = PersistencyManager.Instance.SaveData;
             _boobs[(int)sd.CurrentBreast].SetActive(true);
             if (sd.CurrentPenis != null) _penises[(int)sd.CurrentPenis].SetActive(true);
-            _frontHairs[(int)sd.CurrentHair - 1].SetActive(true);
-            _backHairs[(int)sd.CurrentHair - 1].SetActive(true);
+            _frontHairs[(int)sd.CurrentHair].SetActive(true);
+            _backHairs[(int)sd.CurrentHair].SetActive(true);
         }
 
         private void RemoveAllChoices()
