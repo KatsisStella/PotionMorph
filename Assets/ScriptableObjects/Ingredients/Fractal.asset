@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
   m_Name: Fractal
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Fractal
   LiquidState: 2
   Color: {r: 0.41897056, g: 0.054512277, b: 0.46226418, a: 1}
-  SingleAdjective: 
-  TwoAdjective: 
-  ThreeName: 
+  SingleAdjective: sierpinski's juice
+  TwoAdjective: Recursive
+  ThreeName: Fractalized Substance

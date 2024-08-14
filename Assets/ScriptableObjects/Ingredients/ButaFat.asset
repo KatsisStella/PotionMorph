@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
   m_Name: ButaFat
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Buta Fat
   LiquidState: 2
   Color: {r: 0.754717, g: 0.40795156, b: 0.21003917, a: 1}
-  SingleAdjective: 
-  TwoAdjective: 
-  ThreeName: 
+  SingleAdjective: buta broth
+  TwoAdjective: Greasy
+  ThreeName: Buta tallow

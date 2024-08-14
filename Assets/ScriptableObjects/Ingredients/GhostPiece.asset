@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
   m_Name: GhostPiece
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Ghost Piece
   LiquidState: 0
   Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0.5254902}
-  SingleAdjective: 
-  TwoAdjective: 
-  ThreeName: 
+  SingleAdjective: scary fragment
+  TwoAdjective: 'Translucent '
+  ThreeName: Juice of white Tetra
