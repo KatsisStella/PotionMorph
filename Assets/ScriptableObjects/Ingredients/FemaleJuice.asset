@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
   m_Name: FemaleJuice
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Female Juice
   LiquidState: 0
   Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
-  SingleAdjective: 
-  TwoAdjective: 
-  ThreeName: 
+  SingleAdjective: pleasing substance
+  TwoAdjective: Sexually
+  ThreeName: Juice of love

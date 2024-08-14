@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc015edd7705694786de289d6c83ddd, type: 3}
   m_Name: LivingInk
   m_EditorClassIdentifier: 
-  Name: 
+  Name: Living Ink
   LiquidState: 0
   Color: {r: 0.14214565, g: 0.14177644, b: 0.509434, a: 1}
-  SingleAdjective: 
-  TwoAdjective: 
-  ThreeName: 
+  SingleAdjective: tinted juice
+  TwoAdjective: 'Moving '
+  ThreeName: 'Inky Homunculus '
