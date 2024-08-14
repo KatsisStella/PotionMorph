@@ -2356,13 +2356,14 @@ MonoBehaviour:
   _aethraTriggerArea: {fileID: 1373865494}
   _choiceContainer: {fileID: 1755144721}
   _choicePrefab: {fileID: 4411839247911610479, guid: ffb258b648f4c7a4c8278d91c0ef0986, type: 3}
-  _boobsContainer: {fileID: 2137664405}
-  _penisesContainer: {fileID: 1850060161}
-  _frontHairContainer: {fileID: 702778587}
-  _backHairContainer: {fileID: 702778586}
-  _expressionsContainer: {fileID: 578170047}
-  _bellyBoobsContainer: {fileID: 578170046}
-  _extraContainer: {fileID: 578170045}
+  _containers:
+  - {fileID: 578170047}
+  - {fileID: 702778587}
+  - {fileID: 1850060161}
+  - {fileID: 2137664405}
+  - {fileID: 578170046}
+  - {fileID: 578170045}
+  - {fileID: 702778586}
   _boobs:
   - {fileID: 333145056}
   - {fileID: 150978082}
