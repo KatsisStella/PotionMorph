@@ -22,7 +22,10 @@ namespace PotionMorph.Manager
         private Transform[] _containers;
 
         [SerializeField]
-        private GameObject[] _boobs, _penises, _frontHairs, _backHairs;
+        private GameObject[] _boobs, _penises, _frontHairs, _backHairs, _bodyHairs;
+
+        [SerializeField]
+        private GameObject _exprIdle, _exprHorny, _exprExcited, _exprSurprised, _exprBlush;
 
         [SerializeField]
         private RuntimeAnimatorController _cumAnim, _milkAnim;
@@ -54,6 +57,18 @@ namespace PotionMorph.Manager
             if (sd.CurrentPenis != null) _penises[(int)sd.CurrentPenis].SetActive(true);
             _frontHairs[(int)sd.CurrentHair].SetActive(true);
             _backHairs[(int)sd.CurrentHair].SetActive(true);
+            if (sd.CurrentBodyHair > Size.Small)
+            {
+                _backHairs[(int)sd.CurrentHair - 1].SetActive(true);
+            }
+            switch (sd.CurrentExpression)
+            {
+                case Expression.Idle: _exprIdle.SetActive(true); break;
+                case Expression.Horny: _exprHorny.SetActive(true); break;
+                case Expression.Excited: _exprExcited.SetActive(true); break;
+                case Expression.Surprised: _exprSurprised.SetActive(true); break;
+                case Expression.Blush: _exprBlush.SetActive(true); break;
+            }
         }
 
         private void RemoveAllChoices()

@@ -14,5 +14,8 @@ namespace PotionMorph.SO
         public string SingleAdjective;
         public string TwoAdjective;
         public string ThreeName;
+
+        [TextArea]
+        public string ThreeDescription;
     }
 }

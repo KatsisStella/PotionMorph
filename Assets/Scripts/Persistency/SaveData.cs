@@ -8,7 +8,8 @@ namespace PotionMorph.Persistency
         public Size CurrentBreast { set; get; } = Size.Medium;
         public Size? CurrentPenis { set; get; } = null;
         public Size CurrentHair { set; get; } = Size.Medium;
-        public Size CurrentBodyHair {  set; get; } = Size.Small;
+        public Size CurrentBodyHair { set; get; } = Size.Small;
+        public Expression CurrentExpression { set; get; } = Expression.Idle;
         public List<string> DiscoveredRecipes { set; get; } = new();
 
         public void UpdateBreast(bool increase)
@@ -37,11 +38,15 @@ namespace PotionMorph.Persistency
             CurrentPenis = enable ? Size.Medium : null;
         }
 
+        public void SetExpression(Expression expression)
+        {
+            CurrentExpression = expression;
+        }
+
         public void GrowAll()
         {
             UpdateBreast(true);
             UpdatePenis(true);
-            UpdateHair(true);
 
             PersistencyManager.Instance.Save();
         }
@@ -57,7 +62,6 @@ namespace PotionMorph.Persistency
         {
             UpdateBreast(false);
             UpdatePenis(false);
-            UpdateHair(false);
 
             PersistencyManager.Instance.Save();
         }
@@ -68,5 +72,14 @@ namespace PotionMorph.Persistency
         Small,
         Medium,
         Big
+    }
+
+    public enum Expression
+    {
+        Idle,
+        Horny,
+        Excited,
+        Surprised,
+        Blush
     }
 }
