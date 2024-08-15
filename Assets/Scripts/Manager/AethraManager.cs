@@ -22,7 +22,7 @@ namespace PotionMorph.Manager
         private Transform[] _containers;
 
         [SerializeField]
-        private GameObject[] _boobs, _penises, _frontHairs, _backHairs, _bodyHairs;
+        private GameObject[] _boobs, _penises, _frontHairs, _backHairs, _bodyHairs, _pregBoobs;
 
         [SerializeField]
         private GameObject _exprIdle, _exprHorny, _exprExcited, _exprSurprised, _exprBlush;
@@ -56,7 +56,14 @@ namespace PotionMorph.Manager
 
             // Spawn things
             var sd = PersistencyManager.Instance.SaveData;
-            _boobs[(int)sd.CurrentBreast].SetActive(true);
+            if (sd.IsPregnant)
+            {
+                _pregBoobs[Mathf.Clamp((int)sd.CurrentBreast, 0, _pregBoobs.Length)].SetActive(true);
+            }
+            else
+            {
+                _boobs[(int)sd.CurrentBreast].SetActive(true);
+            }
             if (sd.CurrentPenis != null) _penises[(int)sd.CurrentPenis].SetActive(true);
             _frontHairs[(int)sd.CurrentHair].SetActive(true);
             _backHairs[(int)sd.CurrentHair].SetActive(true);

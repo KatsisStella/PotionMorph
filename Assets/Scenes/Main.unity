@@ -2162,6 +2162,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &762478656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -9154599625662929889, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &808001987 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2471228008699190001, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
@@ -2410,6 +2415,9 @@ MonoBehaviour:
   _bodyHairs:
   - {fileID: 1000705241}
   - {fileID: 1795991237}
+  _pregBoobs:
+  - {fileID: 2136441904}
+  - {fileID: 762478656}
   _exprIdle: {fileID: 1131146701}
   _exprHorny: {fileID: 183978506}
   _exprExcited: {fileID: 376359055}
@@ -4435,6 +4443,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2136441904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8102120599897478597, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2137664405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3988428343679781838, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}

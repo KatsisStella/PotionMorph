@@ -13,6 +13,7 @@ namespace PotionMorph.Persistency
         public bool HavePheromoneCloud { set; get; } = false;
         public bool HaveSweat { set; get; } = false;
         public Juice Juice { set; get; } = Juice.None;
+        public bool IsPregnant = false;
         public List<string> DiscoveredRecipes { set; get; } = new();
 
         public void UpdateBreast(bool increase)
@@ -49,6 +50,11 @@ namespace PotionMorph.Persistency
         public void ToggleSweat(bool enable)
         {
             HaveSweat = enable;
+        }
+
+        public void TogglePregnancy(bool enable)
+        {
+            IsPregnant = enable;
         }
 
         public void SetJuice(Juice juice)
