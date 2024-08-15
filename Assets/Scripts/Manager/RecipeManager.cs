@@ -20,6 +20,8 @@ namespace PotionMorph.Manager
         [SerializeField]
         private TMP_Text _importantRecipes;
 
+        private IngredientInfo _lastIngredient;
+
         private void Awake()
         {
             Instance = this;
@@ -42,6 +44,7 @@ namespace PotionMorph.Manager
 
             Debug.Log($"Got recipe with {string.Join(", ", ingredients.Select(x => x.Name))}");
             var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => ingredients.Contains(i)));
+            var got3Same = ingredients.Distinct().Count() == 1;
 
             if (targetRecipe != null)
             {
@@ -72,10 +75,10 @@ namespace PotionMorph.Manager
                 }
                 AethraManager.Instance.UpdateAethra();
             }
-            else if (ingredients.Distinct().Count() == 1)
+            else if (got3Same)
             {
                 _recipeText.text = ingredients[0].ThreeName;
-                _recipeEffect.text = ingredients[0].ThreeDescription;
+                _recipeEffect.text = _lastIngredient == ingredients[0] ? "There must be a recipe that would fully use the effects of this" : ingredients[0].ThreeDescription;
                 _recipeEffect.gameObject.SetActive(true);
             }
             else if (ingredients.Distinct().Count() == 2)
@@ -87,6 +90,8 @@ namespace PotionMorph.Manager
             {
                 _recipeText.text = "Unidentified mix";
             }
+
+            _lastIngredient = got3Same ? ingredients[0] : null;
 
             StartCoroutine(RemoveRecipeText());
         }
