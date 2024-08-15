@@ -8,16 +8,38 @@ namespace PotionMorph.SO
     {
         public string Name;
 
+        public string Description;
+
         public IngredientInfo[] Ingredients;
 
-        public RecipeEffect Effect;
+        public RecipeEffect[] Effect;
     }
 
     public enum RecipeEffect
     {
-        None,
-        GrowAll,
-        ReduceAll,
-        AddPenis
+        IncreaseBreast,
+        DecreaseBreast,
+        IncreasePenis,
+        DecreasePenis,
+        IncreaseHair,
+        DecreaseHair,
+        IncreasePubes,
+        DecreasePubes,
+        EnablePenis,
+        DisablePenis,
+        EnablePheromones,
+        DisablePheromones,
+        EnableSweat,
+        DisableSweat,
+        EnablePregnancy,
+        DisablePregnancy,
+        UnsetJuice,
+        SetUrine,
+        SetFemaleJuice,
+        SetExpIdle,
+        SetExpHorny,
+        SetExpExcited,
+        SetExpSurprised,
+        SetExpBlush
     }
 }

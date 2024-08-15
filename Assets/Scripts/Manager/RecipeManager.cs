@@ -55,24 +55,39 @@ namespace PotionMorph.Manager
                 }
 
                 _recipeText.text = targetRecipe.Name;
-                switch (targetRecipe.Effect)
+                foreach (var effect in targetRecipe.Effect) 
                 {
-                    case RecipeEffect.None: break;
-
-                    case RecipeEffect.ReduceAll:
-                        PersistencyManager.Instance.SaveData.ReduceAll();
-                        break;
-
-                    case RecipeEffect.GrowAll:
-                        PersistencyManager.Instance.SaveData.GrowAll();
-                        break;
-
-                    case RecipeEffect.AddPenis:
-                        PersistencyManager.Instance.SaveData.AddPenis();
-                        break;
-
-                    default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
+                    switch (effect)
+                    {
+                        case RecipeEffect.IncreaseBreast: PersistencyManager.Instance.SaveData.UpdateBreast(true); break;
+                        case RecipeEffect.DecreaseBreast: PersistencyManager.Instance.SaveData.UpdateBreast(false); break;
+                        case RecipeEffect.IncreasePenis: PersistencyManager.Instance.SaveData.UpdatePenis(true); break;
+                        case RecipeEffect.DecreasePenis: PersistencyManager.Instance.SaveData.UpdatePenis(false); break;
+                        case RecipeEffect.IncreaseHair: PersistencyManager.Instance.SaveData.UpdateHair(true); break;
+                        case RecipeEffect.DecreaseHair: PersistencyManager.Instance.SaveData.UpdateHair(false); break;
+                        case RecipeEffect.IncreasePubes: PersistencyManager.Instance.SaveData.UpdateBodyHair(true); break;
+                        case RecipeEffect.DecreasePubes: PersistencyManager.Instance.SaveData.UpdateBodyHair(false); break;
+                        case RecipeEffect.EnablePenis: PersistencyManager.Instance.SaveData.TogglePenis(true); break;
+                        case RecipeEffect.DisablePenis: PersistencyManager.Instance.SaveData.TogglePenis(false); break;
+                        case RecipeEffect.EnablePheromones: PersistencyManager.Instance.SaveData.TogglePheromoneCloud(true); break;
+                        case RecipeEffect.DisablePheromones: PersistencyManager.Instance.SaveData.TogglePheromoneCloud(false); break;
+                        case RecipeEffect.EnableSweat: PersistencyManager.Instance.SaveData.ToggleSweat(true); break;
+                        case RecipeEffect.DisableSweat: PersistencyManager.Instance.SaveData.ToggleSweat(false); break;
+                        case RecipeEffect.EnablePregnancy: PersistencyManager.Instance.SaveData.TogglePregnancy(true); break;
+                        case RecipeEffect.DisablePregnancy: PersistencyManager.Instance.SaveData.TogglePregnancy(false); break;
+                        case RecipeEffect.UnsetJuice: PersistencyManager.Instance.SaveData.SetJuice(Juice.None); break;
+                        case RecipeEffect.SetUrine: PersistencyManager.Instance.SaveData.SetJuice(Juice.Urine); break;
+                        case RecipeEffect.SetFemaleJuice: PersistencyManager.Instance.SaveData.SetJuice(Juice.FemaleJuice); break;
+                        case RecipeEffect.SetExpIdle: PersistencyManager.Instance.SaveData.SetExpression(Expression.Idle); break;
+                        case RecipeEffect.SetExpHorny: PersistencyManager.Instance.SaveData.SetExpression(Expression.Horny); break;
+                        case RecipeEffect.SetExpExcited: PersistencyManager.Instance.SaveData.SetExpression(Expression.Excited); break;
+                        case RecipeEffect.SetExpSurprised: PersistencyManager.Instance.SaveData.SetExpression(Expression.Surprised); break;
+                        case RecipeEffect.SetExpBlush: PersistencyManager.Instance.SaveData.SetExpression(Expression.Blush); break;
+                        default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
+                    }
                 }
+
+                PersistencyManager.Instance.Save();
                 AethraManager.Instance.UpdateAethra();
             }
             else if (got3Same)

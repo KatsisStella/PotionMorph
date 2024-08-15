@@ -1439,7 +1439,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549216686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6840}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 76, y: 76, z: 76}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2749,9 +2749,7 @@ MonoBehaviour:
   _recipeText: {fileID: 1823512095}
   _recipeEffect: {fileID: 475798260}
   _recipes:
-  - {fileID: 11400000, guid: 7cf41786101a1cd448fc57238d6efd43, type: 2}
-  - {fileID: 11400000, guid: 08533984d3d222645a5fd2eacb94ffc5, type: 2}
-  - {fileID: 11400000, guid: 94ff805a80ede6840882f7eaa4df5725, type: 2}
+  - {fileID: 11400000, guid: f84e5638cc64b7b459d820c2e4037b00, type: 2}
   _importantRecipes: {fileID: 267168620}
 --- !u!114 &844083765
 MonoBehaviour:
@@ -3751,6 +3749,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3202429337600579867, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -441680679367459990, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Cinnamon

@@ -5,7 +5,7 @@ namespace PotionMorph.Persistency
 {
     public class SaveData
     {
-        public Size CurrentBreast { set; get; } = Size.Medium;
+        public Size CurrentBreast { set; get; } = Size.Small;
         public Size? CurrentPenis { set; get; } = null;
         public Size CurrentHair { set; get; } = Size.Medium;
         public Size CurrentBodyHair { set; get; } = Size.Small;
@@ -67,28 +67,6 @@ namespace PotionMorph.Persistency
             CurrentExpression = expression;
         }
 
-        public void GrowAll()
-        {
-            UpdateBreast(true);
-            UpdatePenis(true);
-
-            PersistencyManager.Instance.Save();
-        }
-
-        public void AddPenis()
-        {
-            TogglePenis(true);
-
-            PersistencyManager.Instance.Save();
-        }
-
-        public void ReduceAll()
-        {
-            UpdateBreast(false);
-            UpdatePenis(false);
-
-            PersistencyManager.Instance.Save();
-        }
     }
 
     public enum Size
