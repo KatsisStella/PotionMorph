@@ -75,6 +75,8 @@ namespace PotionMorph.Manager
             else if (ingredients.Distinct().Count() == 1)
             {
                 _recipeText.text = ingredients[0].ThreeName;
+                _recipeEffect.text = ingredients[0].ThreeDescription;
+                _recipeEffect.gameObject.SetActive(true);
             }
             else if (ingredients.Distinct().Count() == 2)
             {
