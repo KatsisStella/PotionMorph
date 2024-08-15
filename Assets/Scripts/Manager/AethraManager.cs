@@ -28,6 +28,9 @@ namespace PotionMorph.Manager
         private GameObject _exprIdle, _exprHorny, _exprExcited, _exprSurprised, _exprBlush;
 
         [SerializeField]
+        private GameObject _femaleJuice, _urine, _pheromones, _sweat;
+
+        [SerializeField]
         private RuntimeAnimatorController _cumAnim, _milkAnim;
 
         [SerializeField]
@@ -69,6 +72,14 @@ namespace PotionMorph.Manager
                 case Expression.Surprised: _exprSurprised.SetActive(true); break;
                 case Expression.Blush: _exprBlush.SetActive(true); break;
             }
+            switch (sd.Juice)
+            {
+                case Juice.None: break;
+                case Juice.FemaleJuice: _femaleJuice.SetActive(true); break;
+                case Juice.Urine: _urine.SetActive(true); break;
+            }
+            if (sd.HavePheromoneCloud) _pheromones.SetActive(true);
+            if (sd.HaveSweat) _sweat.SetActive(true);
         }
 
         private void RemoveAllChoices()
