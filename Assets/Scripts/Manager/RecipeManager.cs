@@ -4,6 +4,7 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace PotionMorph.Manager
 {
@@ -56,6 +57,12 @@ namespace PotionMorph.Manager
                 AethraIngredient.Urine => _urine,
                 _ => throw new System.NotImplementedException()
             };
+            var target = Instantiate(_ingredientPrefab, _ingredientContainer);
+            target.GetComponent<Image>().sprite = go.GetComponent<SpriteRenderer>().sprite;
+            target.GetComponent<Button>().onClick.AddListener(() =>
+            {
+                SpawnIngredient(go);
+            });
         }
 
         private void AddIngredient(AethraIngredient ingr)
