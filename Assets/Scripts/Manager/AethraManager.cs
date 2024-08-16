@@ -22,7 +22,13 @@ namespace PotionMorph.Manager
         private Transform[] _containers;
 
         [SerializeField]
-        private GameObject[] _boobs, _penises, _frontHairs, _backHairs, _bodyHairs, _pregBoobs;
+        private GameObject[] _boobs, _penises, _bodyHairs, _pregBoobs;
+
+        [SerializeField]
+        private GameObject _frontPonytail, _frontBraids, _frontSmallHair, _frontLongHair;
+
+        [SerializeField]
+        private GameObject _backPonytail, _backBraids, _backSmallHair, _backLongHair;
 
         [SerializeField]
         private GameObject _exprIdle, _exprHorny, _exprExcited, _exprSurprised, _exprBlush;
@@ -65,11 +71,27 @@ namespace PotionMorph.Manager
                 _boobs[(int)sd.CurrentBreast].SetActive(true);
             }
             if (sd.CurrentPenis != null) _penises[(int)sd.CurrentPenis].SetActive(true);
-            _frontHairs[(int)sd.CurrentHair].SetActive(true);
-            _backHairs[(int)sd.CurrentHair].SetActive(true);
-            if (sd.CurrentBodyHair > Size.Small)
+            switch (sd.CurrentHair)
             {
-                _backHairs[(int)sd.CurrentHair - 1].SetActive(true);
+                case HairStyle.Ponytail:
+                    _frontPonytail.SetActive(true);
+                    _backPonytail.SetActive(true);
+                    break;
+
+                case HairStyle.Braids:
+                    _frontBraids.SetActive(true);
+                    _backBraids.SetActive(true);
+                    break;
+
+                case HairStyle.SmallHair:
+                    _frontSmallHair.SetActive(true);
+                    _backSmallHair.SetActive(true);
+                    break;
+
+                case HairStyle.LongHair:
+                    _frontLongHair.SetActive(true);
+                    _backLongHair.SetActive(true);
+                    break;
             }
             switch (sd.CurrentExpression)
             {

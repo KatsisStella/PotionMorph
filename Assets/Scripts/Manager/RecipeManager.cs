@@ -63,8 +63,6 @@ namespace PotionMorph.Manager
                         case RecipeEffect.DecreaseBreast: PersistencyManager.Instance.SaveData.UpdateBreast(false); break;
                         case RecipeEffect.IncreasePenis: PersistencyManager.Instance.SaveData.UpdatePenis(true); break;
                         case RecipeEffect.DecreasePenis: PersistencyManager.Instance.SaveData.UpdatePenis(false); break;
-                        case RecipeEffect.IncreaseHair: PersistencyManager.Instance.SaveData.UpdateHair(true); break;
-                        case RecipeEffect.DecreaseHair: PersistencyManager.Instance.SaveData.UpdateHair(false); break;
                         case RecipeEffect.IncreasePubes: PersistencyManager.Instance.SaveData.UpdateBodyHair(true); break;
                         case RecipeEffect.DecreasePubes: PersistencyManager.Instance.SaveData.UpdateBodyHair(false); break;
                         case RecipeEffect.EnablePenis: PersistencyManager.Instance.SaveData.TogglePenis(true); break;
@@ -83,6 +81,10 @@ namespace PotionMorph.Manager
                         case RecipeEffect.SetExpExcited: PersistencyManager.Instance.SaveData.SetExpression(Expression.Excited); break;
                         case RecipeEffect.SetExpSurprised: PersistencyManager.Instance.SaveData.SetExpression(Expression.Surprised); break;
                         case RecipeEffect.SetExpBlush: PersistencyManager.Instance.SaveData.SetExpression(Expression.Blush); break;
+                        case RecipeEffect.SetPonytail: PersistencyManager.Instance.SaveData.SetHair(HairStyle.Ponytail); break;
+                        case RecipeEffect.SetBraids: PersistencyManager.Instance.SaveData.SetHair(HairStyle.Braids); break;
+                        case RecipeEffect.SetSmallHair: PersistencyManager.Instance.SaveData.SetHair(HairStyle.SmallHair); break;
+                        case RecipeEffect.SetLongHair: PersistencyManager.Instance.SaveData.SetHair(HairStyle.LongHair); break;
                         default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
                     }
                 }

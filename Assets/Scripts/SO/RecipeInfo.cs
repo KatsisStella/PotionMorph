@@ -40,6 +40,10 @@ namespace PotionMorph.SO
         SetExpHorny,
         SetExpExcited,
         SetExpSurprised,
-        SetExpBlush
+        SetExpBlush,
+        SetPonytail,
+        SetBraids,
+        SetSmallHair,
+        SetLongHair
     }
 }

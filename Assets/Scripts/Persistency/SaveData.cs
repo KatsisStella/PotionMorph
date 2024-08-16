@@ -7,7 +7,7 @@ namespace PotionMorph.Persistency
     {
         public Size CurrentBreast { set; get; } = Size.Small;
         public Size? CurrentPenis { set; get; } = null;
-        public Size CurrentHair { set; get; } = Size.Medium;
+        public HairStyle CurrentHair { set; get; } = HairStyle.LongHair;
         public Size CurrentBodyHair { set; get; } = Size.Small;
         public Expression CurrentExpression { set; get; } = Expression.Idle;
         public bool HavePheromoneCloud { set; get; } = false;
@@ -21,15 +21,20 @@ namespace PotionMorph.Persistency
             CurrentBreast = (Size)Math.Clamp((int)CurrentBreast + (increase ? 1 : -1), (int)Size.Small, (int)Size.Big);
         }
 
+        public void ResetBreast()
+        {
+            CurrentBreast = Size.Medium;
+        }
+
         public void UpdatePenis(bool increase)
         {
             if (CurrentPenis == null) return;
             CurrentPenis = (Size)Math.Clamp((int)CurrentPenis + (increase ? 1 : -1), (int)Size.Small, (int)Size.Big);
         }
 
-        public void UpdateHair(bool increase)
+        public void SetHair(HairStyle hairStyle)
         {
-            CurrentHair = (Size)Math.Clamp((int)CurrentHair + (increase ? 1 : -1), (int)Size.Small, (int)Size.Medium);
+            CurrentHair = hairStyle;
         }
 
         public void UpdateBodyHair(bool increase)
@@ -67,6 +72,14 @@ namespace PotionMorph.Persistency
             CurrentExpression = expression;
         }
 
+    }
+
+    public enum HairStyle
+    {
+        Ponytail,
+        Braids,
+        SmallHair,
+        LongHair
     }
 
     public enum Size

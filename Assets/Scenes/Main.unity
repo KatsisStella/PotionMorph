@@ -2414,6 +2414,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &727054565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1698028163082586600, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &727054566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5596664849902080995, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &727054567 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7871933542388386312, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &727054568 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5053744659672975381, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
+  m_PrefabInstance: {fileID: 702778581}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &762478656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -9154599625662929889, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
@@ -2782,18 +2802,20 @@ MonoBehaviour:
   - {fileID: 929469434}
   - {fileID: 1117599130}
   - {fileID: 1088231556}
-  _frontHairs:
-  - {fileID: 702778585}
-  - {fileID: 702778584}
-  _backHairs:
-  - {fileID: 702778583}
-  - {fileID: 702778582}
   _bodyHairs:
   - {fileID: 1000705241}
   - {fileID: 1795991237}
   _pregBoobs:
   - {fileID: 2136441904}
   - {fileID: 762478656}
+  _frontPonytail: {fileID: 727054568}
+  _frontBraids: {fileID: 727054567}
+  _frontSmallHair: {fileID: 702778585}
+  _frontLongHair: {fileID: 702778584}
+  _backPonytail: {fileID: 727054566}
+  _backBraids: {fileID: 727054565}
+  _backSmallHair: {fileID: 702778583}
+  _backLongHair: {fileID: 702778582}
   _exprIdle: {fileID: 1131146701}
   _exprHorny: {fileID: 183978506}
   _exprExcited: {fileID: 376359055}
