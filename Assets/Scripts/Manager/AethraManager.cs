@@ -13,12 +13,6 @@ namespace PotionMorph.Manager
         private GameObject _aethraTriggerArea;
 
         [SerializeField]
-        private Transform _choiceContainer;
-
-        [SerializeField]
-        private GameObject _choicePrefab;
-
-        [SerializeField]
         private Transform[] _containers;
 
         [SerializeField]
@@ -37,13 +31,7 @@ namespace PotionMorph.Manager
         private GameObject _femaleJuice, _urine, _pheromones, _sweat;
 
         [SerializeField]
-        private RuntimeAnimatorController _cumAnim, _milkAnim;
-
-        [SerializeField]
         private GameObject _cum, _milk;
-
-        private bool CanMilk => PersistencyManager.Instance.SaveData.CurrentBreast == Size.Big;
-        private bool CanTakeCum => PersistencyManager.Instance.SaveData.CurrentPenis != null;
 
         private void Awake()
         {
@@ -109,33 +97,6 @@ namespace PotionMorph.Manager
             }
             if (sd.HavePheromoneCloud) _pheromones.SetActive(true);
             if (sd.HaveSweat) _sweat.SetActive(true);
-        }
-
-        private void RemoveAllChoices()
-        {
-            _aethraTriggerArea.SetActive(true);
-            for (int i = 0; i < _choiceContainer.childCount; i++)
-            {
-                Destroy(_choiceContainer.GetChild(i).gameObject);
-            }
-        }
-
-        private void AddChoice(string text, System.Action action)
-        {
-            var go = Instantiate(_choicePrefab, _choiceContainer);
-            go.GetComponentInChildren<TMP_Text>().text = text;
-            go.GetComponent<Button>().onClick.AddListener(new(action));
-        }
-
-        public void ShowChoices()
-        {
-            RemoveAllChoices();
-            _aethraTriggerArea.SetActive(false);
-
-            if (CanMilk) AddChoice("Milking", () => { RecipeManager.Instance.SpawnIngredient(_milk); GameManager.Instance.PlayPreviewAnim(_milkAnim); RemoveAllChoices(); });
-            if (CanTakeCum) AddChoice("Jacking", () => { RecipeManager.Instance.SpawnIngredient(_cum); GameManager.Instance.PlayPreviewAnim(_cumAnim); RemoveAllChoices(); });
-
-            AddChoice("Cancel", () => { _aethraTriggerArea.SetActive(true); RemoveAllChoices(); });
         }
     }
 }

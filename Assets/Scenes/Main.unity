@@ -359,6 +359,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -6926787523474499897, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6926787523474499897, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Cinnamon
@@ -759,6 +763,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2066111479680368272, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2066111479680368272, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Cinnamon
@@ -887,6 +895,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3202429337600579867, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2926480686496235931, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2926480686496235931, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
@@ -2531,6 +2543,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3821064342779469192, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3821064342779469192, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Cinnamon
@@ -2753,7 +2769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d10e97b937e69eb48917c056a4ad70b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _previewAnim: {fileID: 982036224}
+  _previewAnim: {fileID: 0}
 --- !u!114 &844083764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2771,6 +2787,16 @@ MonoBehaviour:
   _recipes:
   - {fileID: 11400000, guid: f84e5638cc64b7b459d820c2e4037b00, type: 2}
   _importantRecipes: {fileID: 267168620}
+  _ingredientContainer: {fileID: 1119095630}
+  _ingredientPrefab: {fileID: 8810091742139804229, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+  _cum: {fileID: 1009876470984491368, guid: ee74163f9e82e3e4b8417bed35c1a031, type: 3}
+  _femaleJuice: {fileID: 7352436258444439719, guid: e1918bc19489e8842a1317d1856f6fec, type: 3}
+  _milk: {fileID: 7574146299150823602, guid: afc0a3f3bb24a5445b1aa110b8960cc9, type: 3}
+  _pheromones: {fileID: 5914336749615222859, guid: 87db2a4ac7e72f144a477133e8b3c512, type: 3}
+  _pubes: {fileID: 8336508933788426371, guid: f6fc81a60e883424bb016a2eae84ad5a, type: 3}
+  _saliva: {fileID: 4630149711575302377, guid: 33272089c37871d4aa51090acbd28dbc, type: 3}
+  _sweat: {fileID: 8431734792190141068, guid: 00208b695c6f89b4387f985ddd32d017, type: 3}
+  _urine: {fileID: 849646901768434252, guid: e1f9ced6319301b47b1930200a5e60c5, type: 3}
 --- !u!114 &844083765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2784,8 +2810,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _aethraTriggerArea: {fileID: 1373865494}
-  _choiceContainer: {fileID: 1755144721}
-  _choicePrefab: {fileID: 4411839247911610479, guid: ffb258b648f4c7a4c8278d91c0ef0986, type: 3}
   _containers:
   - {fileID: 578170047}
   - {fileID: 702778587}
@@ -2825,8 +2849,6 @@ MonoBehaviour:
   _urine: {fileID: 1985434417}
   _pheromones: {fileID: 1636026524}
   _sweat: {fileID: 464066472}
-  _cumAnim: {fileID: 22100000, guid: d9587d44fff744b4487130fe1d50b598, type: 2}
-  _milkAnim: {fileID: 22100000, guid: c568776a2b4dc2049a91419361fb1906, type: 2}
   _cum: {fileID: 1009876470984491368, guid: ee74163f9e82e3e4b8417bed35c1a031, type: 3}
   _milk: {fileID: 7574146299150823602, guid: afc0a3f3bb24a5445b1aa110b8960cc9, type: 3}
 --- !u!224 &904013269 stripped
@@ -3229,6 +3251,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4798455246999335528, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4798455246999335528, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Cinnamon
@@ -3274,7 +3300,6 @@ GameObject:
   - component: {fileID: 982036221}
   - component: {fileID: 982036223}
   - component: {fileID: 982036222}
-  - component: {fileID: 982036224}
   m_Layer: 5
   m_Name: AnimationPreview
   m_TagString: Untagged
@@ -3339,28 +3364,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 982036220}
   m_CullTransparentMesh: 1
---- !u!95 &982036224
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982036220}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b98f0d7ec20bd154e9a5344e1655c95f, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1000705241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3571222391524942303, guid: 8c2fdbd42cd85db40aeb67507de44831, type: 3}
@@ -3772,6 +3775,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3202429337600579867, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -441680679367459990, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -441680679367459990, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
@@ -4236,6 +4243,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3202429337600579867, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3222996833039826069, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 3222996833039826069, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
@@ -4981,6 +4992,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1547107426591165569, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1547107426591165569, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Koberry
@@ -5324,6 +5339,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3202429337600579867, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7770602095848951870, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+    - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7770602095848951870, guid: c0a8f413a93b74549a28074951a64d31, type: 3}

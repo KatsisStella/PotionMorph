@@ -13,7 +13,8 @@ namespace PotionMorph.Persistency
         public bool HavePheromoneCloud { set; get; } = false;
         public bool HaveSweat { set; get; } = false;
         public Juice Juice { set; get; } = Juice.None;
-        public bool IsPregnant = false;
+        public bool IsPregnant = false; public List<AethraIngredient> AethraIngredients { set; get; } = new();
+
         public List<string> DiscoveredRecipes { set; get; } = new();
 
         public void UpdateBreast(bool increase)
@@ -72,6 +73,18 @@ namespace PotionMorph.Persistency
             CurrentExpression = expression;
         }
 
+    }
+
+    public enum AethraIngredient
+    {
+        Cum,
+        FemaleJuice,
+        Milk,
+        Pheromones,
+        Pubes,
+        Saliva,
+        Sweat,
+        Urine
     }
 
     public enum HairStyle

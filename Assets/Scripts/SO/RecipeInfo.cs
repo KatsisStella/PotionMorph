@@ -44,6 +44,14 @@ namespace PotionMorph.SO
         SetPonytail,
         SetBraids,
         SetSmallHair,
-        SetLongHair
+        SetLongHair,
+        UnlockCum,
+        UnlockFemaleJuice,
+        UnlockMilk,
+        UnlockPheromones,
+        UnlockPubes,
+        UnlockSaliva,
+        UnlockSweat,
+        UnlockUrine
     }
 }
