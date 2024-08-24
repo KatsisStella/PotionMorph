@@ -15,7 +15,6 @@ namespace PotionMorph.SO
         public string TwoAdjective;
         public string ThreeName;
 
-        [TextArea]
-        public string ThreeDescription;
+        public string Hint;
     }
 }

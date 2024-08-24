@@ -87,6 +87,7 @@ namespace PotionMorph.Manager
         public void LoadRecipe(IngredientInfo[] ingredients)
         {
             _recipeText.gameObject.SetActive(true);
+            _recipeEffect.gameObject.SetActive(true);
 
             Debug.Log($"Got recipe with {string.Join(", ", ingredients.Select(x => x.Name))}");
             var targetRecipe = _recipes.FirstOrDefault(x => x.Ingredients.Length == ingredients.Length && x.Ingredients.All(i => ingredients.Contains(i)));
@@ -142,6 +143,7 @@ namespace PotionMorph.Manager
                         default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
                     }
                 }
+                _recipeEffect.text = string.Empty;
 
                 PersistencyManager.Instance.Save();
                 AethraManager.Instance.UpdateAethra();
@@ -151,27 +153,50 @@ namespace PotionMorph.Manager
             else if (gotAllSame)
             {
                 _recipeText.text = ingredients[0].ThreeName;
-                _recipeEffect.text = _lastIngredient == ingredients[0] ? "There must be a recipe that would fully use the effects of this" : ingredients[0].ThreeDescription;
-                _recipeEffect.gameObject.SetActive(true);
-
-                _lastIngredient = ingredients.Length == 1 ? null : ingredients[0];
+                if (ingredients.Length == 1)
+                {
+                    _recipeEffect.text = _lastIngredient == ingredients[0] ? "There must be a recipe that would fully use the effects of this" : $"This tastes {ingredients[0].Hint}";
+                    _lastIngredient = ingredients.Length == 1 ? null : ingredients[0];
+                }
+                else
+                {
+                    _recipeEffect.text = $"This tastes {ingredients[0].Hint}";
+                    _lastIngredient = null;
+                }
             }
             else if (ingredients.Distinct().Count() == 2)
             {
                 var groups = ingredients.GroupBy(x => x.Name).OrderByDescending(x => x.Count()).ToArray();
                 _recipeText.text = $"{groups[0].ElementAt(0).TwoAdjective} {groups[1].ElementAt(0).SingleAdjective}";
+                _recipeEffect.text = $"This recipe need to be more {GetClosestUndiscoveredIngredient(ingredients).Hint}";
 
                 _lastIngredient = null;
             }
             else
             {
                 _recipeText.text = "Unidentified mix";
+                _recipeEffect.text = $"This recipe need to be more {GetClosestUndiscoveredIngredient(ingredients).Hint}";
 
                 _lastIngredient = null;
             }
 
 
             StartCoroutine(RemoveRecipeText());
+        }
+
+        private IngredientInfo GetClosestUndiscoveredIngredient(IngredientInfo[] ingredients)
+        {
+            var pending = _recipes.Where(x => !PersistencyManager.Instance.SaveData.DiscoveredRecipes.Any(y => y == x.Name));
+            if (pending.Any())
+            {
+                return pending
+                    .OrderBy(x => x.Ingredients.Count(y => ingredients.Any(z => z.Name == y.Name)))
+                    .First()
+                    .Ingredients
+                    .Where(x => !ingredients.Any(y => y.Name == x.Name))
+                    .First();
+            }
+            return null;
         }
 
         private IEnumerator RemoveRecipeText()
