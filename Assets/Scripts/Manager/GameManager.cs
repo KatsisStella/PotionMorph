@@ -9,9 +9,6 @@ namespace PotionMorph.Manager
     {
         public static GameManager Instance { private set; get; }
 
-        [SerializeField]
-        private Animator _previewAnim;
-
         private Camera _cam;
 
         private IProp _follower;
@@ -32,17 +29,17 @@ namespace PotionMorph.Manager
 
         public void PlayPreviewAnim(RuntimeAnimatorController clip)
         {
-            _previewAnim.runtimeAnimatorController = clip;
+            /*_previewAnim.runtimeAnimatorController = clip;
             _previewAnim.gameObject.SetActive(true);
             _previewAnim.SetTrigger("Run");
-            StartCoroutine(HideAnimation());
+            StartCoroutine(HideAnimation());*/
         }
 
-        private IEnumerator HideAnimation()
+        /*private IEnumerator HideAnimation()
         {
             yield return new WaitForSeconds(1f);
             _previewAnim.gameObject.SetActive(false);
-        }
+        }*/
 
         private Vector2 MousePos =>
 #if UNITY_ANDROID && !UNITY_EDITOR

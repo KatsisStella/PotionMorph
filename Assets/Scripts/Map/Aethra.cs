@@ -11,15 +11,11 @@ namespace PotionMorph.Map
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Spatula"))
+            if (collision.TryGetComponent<Container>(out var container) && !container.CanReceiveIngredient)
             {
-                var spatula = collision.GetComponent<Container>();
-                if (spatula.HasAtLeast(3))
-                {
-                    RecipeManager.Instance.LoadRecipe(spatula.GetAllIngredients().Select(x => x.Info).ToArray());
-                    spatula.Empty();
-                    GameManager.Instance.PlayPreviewAnim(_drinking);
-                }
+                RecipeManager.Instance.LoadRecipe(container.GetAllIngredients().Select(x => x.Info).ToArray());
+                container.Empty();
+                GameManager.Instance.PlayPreviewAnim(_drinking);
             }
         }
     }

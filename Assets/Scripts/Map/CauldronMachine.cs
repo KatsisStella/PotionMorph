@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace PotionMorph.Map
 {
-    public class CauldronMachine : AConsumeMachine<Container>
+    public class CauldronMachine : AConsumeMachine<Ingredient>
     {
         [SerializeField]
         private Container _spatula;
 
-        private readonly List<Container> _ingredients = new();
+        private readonly List<Ingredient> _ingredients = new();
 
         private Vector3 _baseSpatulaPos;
 
@@ -43,23 +43,18 @@ namespace PotionMorph.Map
             _spatula.AssociatedMachine = this;
         }
 
-        protected override bool CanTreat(GameObject go, out Container output)
+        protected override bool CanTreat(GameObject go, out Ingredient output)
         {
-            return base.CanTreat(go, out output) &&
-                _spatula.AssociatedMachine != null && // We only add things on the cauldron if the spatula is there
-                !go.CompareTag("Spatula") && // The spatula can't count as an ingredient
-                output.HasAny; // We are not interested in empty containers
+            return base.CanTreat(go, out output) && _spatula.AssociatedMachine != null;
         }
 
-        protected override void TreatConsumption(Container ingredient)
+        protected override void TreatConsumption(Ingredient ingredient)
         {
-            if (!ingredient.HasAny) return;
-
-            Debug.Log($"Adding {ingredient.name} to cauldron (+{ingredient.IngredientCount})");
+            Debug.Log($"Adding {ingredient.name} to cauldron");
             _ingredients.Add(ingredient);
-            if (_ingredients.Sum(x => x.IngredientCount) >= 3)
+            if (_ingredients.Count >= 3)
             {
-                _spatula.Fill(_ingredients.SelectMany(x => x.GetAllIngredients()).ToArray());
+                _spatula.Fill(_ingredients.ToArray());
                 _ingredients.Clear();
                 _spatula.CanGrab = true;
             }

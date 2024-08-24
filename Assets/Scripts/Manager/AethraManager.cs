@@ -1,7 +1,5 @@
 ﻿using PotionMorph.Persistency;
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace PotionMorph.Manager
 {
