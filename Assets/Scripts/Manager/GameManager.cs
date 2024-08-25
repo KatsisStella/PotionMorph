@@ -1,5 +1,4 @@
 using PotionMorph.Map;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,9 +7,6 @@ namespace PotionMorph.Manager
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance { private set; get; }
-
-        [SerializeField]
-        private Animator _previewAnim;
 
         private Camera _cam;
 
@@ -30,18 +26,19 @@ namespace PotionMorph.Manager
             }
         }
 
-        public void PlayPreviewAnim()
+        public void PlayPreviewAnim(RuntimeAnimatorController clip)
         {
+            /*_previewAnim.runtimeAnimatorController = clip;
             _previewAnim.gameObject.SetActive(true);
             _previewAnim.SetTrigger("Run");
-            StartCoroutine(HideAnimation());
+            StartCoroutine(HideAnimation());*/
         }
 
-        private IEnumerator HideAnimation()
+        /*private IEnumerator HideAnimation()
         {
             yield return new WaitForSeconds(1f);
             _previewAnim.gameObject.SetActive(false);
-        }
+        }*/
 
         private Vector2 MousePos =>
 #if UNITY_ANDROID && !UNITY_EDITOR

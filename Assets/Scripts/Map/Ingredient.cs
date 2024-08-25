@@ -1,14 +1,15 @@
-﻿using UnityEngine;
+﻿using PotionMorph.SO;
+using UnityEngine;
 
 namespace PotionMorph.Map
 {
     public class Ingredient : MonoBehaviour, IProp
     {
-        [SerializeField] private LiquidState _liquidState;
-        [SerializeField] private Color _color;
+        [SerializeField] private IngredientInfo _info;
 
-        public LiquidState LiquidState => _liquidState;
-        public Color Color => _color;
+        public IngredientInfo Info => _info;
+        public LiquidState LiquidState => _info.LiquidState;
+        public Color Color => _info.Color;
 
         public bool CanGrab => true;
 
@@ -19,6 +20,11 @@ namespace PotionMorph.Map
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
+        }
+
+        private void Update()
+        {
+            if (transform.position.y < -10f) Destroy(gameObject);
         }
     }
 }

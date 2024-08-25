@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40858894d2d6ea43a151984dcd4192a, type: 3}
+  m_Name: Sour Candy
+  m_EditorClassIdentifier: 
+  Name: Sour Candy
+  Description: Increases the size of your penis and boobs!
+  Ingredients:
+  - {fileID: 11400000, guid: 3b3e6a0515a47e245b21c566b104e332, type: 2}
+  - {fileID: 11400000, guid: 917671fb2e33b4441a0b73ab14c1bf8b, type: 2}
+  - {fileID: 11400000, guid: a2b3a0527d187d94c9eb9214d5760ab2, type: 2}
+  Effect: 

@@ -19,6 +19,8 @@ namespace PotionMorph.Map
         }
 
         protected abstract void TreatConsumption(TAccept ingredient);
+        protected virtual void DenyConsumption(GameObject ingredient)
+        { }
 
         public void Unregister(IProp prop)
         {
@@ -44,6 +46,10 @@ namespace PotionMorph.Map
                 if (CanTreat(go, out var ingredient))
                 {
                     Consume(ingredient);
+                }
+                else
+                {
+                    DenyConsumption(go);
                 }
             });
         }

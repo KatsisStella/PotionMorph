@@ -1,20 +1,21 @@
 ﻿using PotionMorph.Manager;
+using System.Linq;
 using UnityEngine;
 
 namespace PotionMorph.Map
 {
     public class Aethra : MonoBehaviour
     {
+        [SerializeField]
+        private RuntimeAnimatorController _drinking;
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.CompareTag("Spatula"))
+            if (collision.TryGetComponent<Container>(out var container) && !container.CanReceiveIngredient)
             {
-                var spatula = collision.GetComponent<Container>();
-                if (spatula.Ingredients.Length >= 3)
-                {
-                    spatula.Empty();
-                    GameManager.Instance.PlayPreviewAnim();
-                }
+                RecipeManager.Instance.LoadRecipe(container.GetAllIngredients().Select(x => x.Info).ToArray());
+                container.Empty();
+                GameManager.Instance.PlayPreviewAnim(_drinking);
             }
         }
     }

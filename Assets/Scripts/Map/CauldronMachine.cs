@@ -1,39 +1,76 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using PotionMorph.Manager;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace PotionMorph.Map
 {
-    public class CauldronMachine : AConsumeMachine<Container>
+    public class CauldronMachine : AConsumeMachine<Ingredient>
     {
         [SerializeField]
         private Container _spatula;
 
-        private readonly List<Container> _ingredients = new();
+        private readonly List<Ingredient> _ingredients = new();
+
+        private Vector3 _baseSpatulaPos;
 
         protected override void Awake()
         {
             base.Awake();
+
+            _baseSpatulaPos = _spatula.transform.position;
+
+            // Put back spatula on the cauldron
+            _detector.OnAdded.AddListener((go) =>
+            {
+                if (go.CompareTag("Spatula") && !go.GetComponent<Container>().HasAny)
+                {
+                    GameManager.Instance.Drop(go.GetComponent<Container>());
+                    _spatula.Rigidbody.linearVelocity = Vector2.zero;
+                    _spatula.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
+                    _spatula.transform.position = _baseSpatulaPos;
+                    _spatula.AssociatedMachine = this;
+                    _spatula.CanGrab = false;
+                    _container = _spatula;
+                }
+            });
+        }
+
+        private void Start()
+        {
             _container = _spatula;
             _spatula.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
             _spatula.CanGrab = false;
+            _spatula.AssociatedMachine = this;
         }
 
-        protected override bool CanTreat(GameObject go, out Container output)
+        protected override bool CanTreat(GameObject go, out Ingredient output)
         {
-            return base.CanTreat(go, out output) && output.Ingredients.Any();
+            return base.CanTreat(go, out output) && _spatula.AssociatedMachine != null;
         }
 
-        protected override void TreatConsumption(Container ingredient)
+        protected override void TreatConsumption(Ingredient ingredient)
         {
-            if (!ingredient.Ingredients.Any()) return;
-
-            Debug.Log($"Adding {ingredient.name} to cauldron (+{ingredient.Ingredients.Length})");
+            Debug.Log($"Adding {ingredient.name} to cauldron");
             _ingredients.Add(ingredient);
-            if (_ingredients.Sum(x => x.Ingredients.Length) >= 3)
+            if (_ingredients.Count >= 3)
             {
-                _spatula.Fill(_ingredients.SelectMany(x => x.Ingredients).ToArray());
+                _spatula.Fill(_ingredients.ToArray());
+                _ingredients.Clear();
                 _spatula.CanGrab = true;
+            }
+        }
+
+        protected override void DenyConsumption(GameObject ingredient)
+        {
+            base.DenyConsumption(ingredient);
+
+            if (!ingredient.CompareTag("Spatula") && ingredient.TryGetComponent<Rigidbody2D>(out var rb))
+            {
+                if (ingredient.TryGetComponent<IProp>(out var prop))
+                {
+                    GameManager.Instance.Drop(prop);
+                }
+                rb.AddForce(new Vector2(Random.Range(-.25f, .25f), 1f).normalized * 20f, ForceMode2D.Impulse);
             }
         }
     }
