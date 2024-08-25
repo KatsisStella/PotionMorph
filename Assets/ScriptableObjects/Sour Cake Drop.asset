@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40858894d2d6ea43a151984dcd4192a, type: 3}
+  m_Name: Sour Cake Drop
+  m_EditorClassIdentifier: 
+  Name: Sour Cake Drop
+  Description: Increases the size of your penis and boobs!
+  Ingredients:
+  - {fileID: 11400000, guid: ba5669570f70a4b42bfa91bc4a8dbb2d, type: 2}
+  - {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
+  - {fileID: 11400000, guid: 2654d4cfd4ab5024fb453261612897c7, type: 2}
+  Effect: 0a0000000100000007000000
