@@ -941,7 +941,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -0.00000023841858, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &485422069
 MonoBehaviour:
@@ -2417,7 +2417,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 20
+  m_PixelsPerUnitMultiplier: 80
 --- !u!222 &731449557
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2899,9 +2899,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 485422068}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -4663,7 +4663,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 731449555}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.011266664
+  m_Size: 0.33799994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
