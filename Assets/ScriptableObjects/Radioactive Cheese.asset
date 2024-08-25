@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Radioactive Cheese
   m_EditorClassIdentifier: 
   Name: Radioactive Cheese
-  Description: Increases the size of your penis and boobs!
+  Description: Make you weirdly horny
   Ingredients:
   - {fileID: 11400000, guid: 19f5063ec618f4946ab2c7653e63a0a4, type: 2}
   - {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
   - {fileID: 11400000, guid: a2b3a0527d187d94c9eb9214d5760ab2, type: 2}
-  Effect: 
+  Effect: 14000000

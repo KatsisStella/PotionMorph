@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Goth Lemon Drops
   m_EditorClassIdentifier: 
   Name: Goth Lemon Drops
-  Description: Increases the size of your penis and boobs!
+  Description: You can't control your pee
   Ingredients:
   - {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
   - {fileID: 11400000, guid: 1bbfa56029abe9f41a71ac909a350a7d, type: 2}
   - {fileID: 11400000, guid: a2b3a0527d187d94c9eb9214d5760ab2, type: 2}
-  Effect: 
+  Effect: 1100000017000000
