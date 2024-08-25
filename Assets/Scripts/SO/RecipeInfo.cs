@@ -13,6 +13,8 @@ namespace PotionMorph.SO
         public IngredientInfo[] Ingredients;
 
         public RecipeEffect[] Effect;
+
+        public string AethraDialogue, WillowDialogue;
     }
 
     public enum RecipeEffect
