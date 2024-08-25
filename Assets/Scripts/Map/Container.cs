@@ -26,14 +26,28 @@ namespace PotionMorph.Map
         public int IngredientCount => _ingredients.Count;
         public IReadOnlyList<Ingredient> GetAllIngredients() => _ingredients.AsReadOnly();
 
+        private Vector2 _spawnPos;
+
         private void Awake()
         {
             Rigidbody = GetComponent<Rigidbody2D>();
+            _spawnPos = transform.position;
         }
 
         private void Update()
         {
-            if (transform.position.y < -10f) Destroy(gameObject);
+            if (transform.position.y < -10f)
+            {
+                if (CompareTag("Spatula"))
+                {
+                    Rigidbody.linearVelocity = Vector2.zero;
+                    transform.position = _spawnPos;
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
 
         public void Fill(params Ingredient[] newIngredients)

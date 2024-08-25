@@ -64,7 +64,7 @@ namespace PotionMorph.Map
         {
             base.DenyConsumption(ingredient);
 
-            if (ingredient.TryGetComponent<Rigidbody2D>(out var rb))
+            if (!ingredient.CompareTag("Spatula") && ingredient.TryGetComponent<Rigidbody2D>(out var rb))
             {
                 if (ingredient.TryGetComponent<IProp>(out var prop))
                 {
