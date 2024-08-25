@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Recursive Bacon
   m_EditorClassIdentifier: 
   Name: Recursive Bacon
-  Description: Increases the size of your penis and boobs!
+  Description: Make your body thinner
   Ingredients:
   - {fileID: 11400000, guid: 1a5462da3ba474a44baa5cf804f6f5db, type: 2}
   - {fileID: 11400000, guid: 1d04688929b6a39428ab161f7790561a, type: 2}
   - {fileID: 11400000, guid: bcf25cfa734618d4a9387c74260ddc9f, type: 2}
-  Effect: 
+  Effect: 010000000f000000

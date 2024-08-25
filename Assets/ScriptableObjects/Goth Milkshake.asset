@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Goth Milkshake
   m_EditorClassIdentifier: 
   Name: Goth Milkshake
-  Description: Increases the size of your penis and boobs!
+  Description: Transform your groin area
   Ingredients:
   - {fileID: 11400000, guid: 1bbfa56029abe9f41a71ac909a350a7d, type: 2}
   - {fileID: 11400000, guid: 19f5063ec618f4946ab2c7653e63a0a4, type: 2}
   - {fileID: 11400000, guid: 81b57be5ccdf3f0498fcbfa9a665da07, type: 2}
-  Effect: 
+  Effect: 080000000700000007000000

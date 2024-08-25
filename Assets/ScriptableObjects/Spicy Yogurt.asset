@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Spicy Yogurt
   m_EditorClassIdentifier: 
   Name: Spicy Yogurt
-  Description: Increases the size of your penis and boobs!
+  Description: Make you pregnant
   Ingredients:
   - {fileID: 11400000, guid: 19f5063ec618f4946ab2c7653e63a0a4, type: 2}
   - {fileID: 11400000, guid: e6b45182ef7fe45428ac8c63413c8ac9, type: 2}
   - {fileID: 11400000, guid: 355e9a90917b7f341803a595dc23d16e, type: 2}
-  Effect: 
+  Effect: 0e000000

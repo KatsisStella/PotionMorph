@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Salted Berry Syrup
   m_EditorClassIdentifier: 
   Name: Salted Berry Syrup
-  Description: Increases the size of your penis and boobs!
+  Description: Make you calm but make you want to pee
   Ingredients:
   - {fileID: 11400000, guid: 81b57be5ccdf3f0498fcbfa9a665da07, type: 2}
   - {fileID: 11400000, guid: 4cb337cb1a1dd124799413a5ff49fa8d, type: 2}
   - {fileID: 11400000, guid: c1f84d824a4641245ade4f54bd4a060b, type: 2}
-  Effect: 
+  Effect: 1300000011000000

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Chicken Nuggets
   m_EditorClassIdentifier: 
   Name: Chicken Nuggets
-  Description: Increases the size of your penis and boobs!
+  Description: Restore your pregnancy
   Ingredients:
   - {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
   - {fileID: 11400000, guid: 1d04688929b6a39428ab161f7790561a, type: 2}
   - {fileID: 11400000, guid: e6b45182ef7fe45428ac8c63413c8ac9, type: 2}
-  Effect: 
+  Effect: 0f00000016000000

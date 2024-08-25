@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Love Crumble
   m_EditorClassIdentifier: 
   Name: Love Crumble
-  Description: Increases the size of your penis and boobs!
+  Description: Make you more excited
   Ingredients:
   - {fileID: 11400000, guid: bcf25cfa734618d4a9387c74260ddc9f, type: 2}
   - {fileID: 11400000, guid: 4cb337cb1a1dd124799413a5ff49fa8d, type: 2}
   - {fileID: 11400000, guid: 2654d4cfd4ab5024fb453261612897c7, type: 2}
-  Effect: 
+  Effect: 0a00000015000000
