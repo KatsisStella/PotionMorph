@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PotionMorph.Manager;
+using System;
 using System.Collections.Generic;
 
 namespace PotionMorph.Persistency
@@ -20,6 +21,7 @@ namespace PotionMorph.Persistency
         public void UpdateBreast(bool increase)
         {
             CurrentBreast = (Size)Math.Clamp((int)CurrentBreast + (increase ? 1 : -1), (int)Size.Small, (int)Size.Big);
+            if (CurrentBreast == Size.Big) RecipeManager.Instance.AddIngredient(AethraIngredient.Milk);
         }
 
         public void ResetBreast()
@@ -41,21 +43,25 @@ namespace PotionMorph.Persistency
         public void UpdateBodyHair(bool increase)
         {
             CurrentBodyHair = (Size)Math.Clamp((int)CurrentBodyHair + (increase ? 1 : -1), (int)Size.Small, (int)Size.Medium);
+            if (increase) RecipeManager.Instance.AddIngredient(AethraIngredient.Pubes);
         }
 
         public void TogglePenis(bool enable)
         {
             CurrentPenis = enable ? Size.Medium : null;
+            if (enable) RecipeManager.Instance.AddIngredient(AethraIngredient.Cum);
         }
 
         public void TogglePheromoneCloud(bool enable)
         {
             HavePheromoneCloud = enable;
+            if (enable) RecipeManager.Instance.AddIngredient(AethraIngredient.Pheromones);
         }
 
         public void ToggleSweat(bool enable)
         {
             HaveSweat = enable;
+            if (enable) RecipeManager.Instance.AddIngredient(AethraIngredient.Sweat);
         }
 
         public void TogglePregnancy(bool enable)
@@ -66,11 +72,14 @@ namespace PotionMorph.Persistency
         public void SetJuice(Juice juice)
         {
             Juice = juice;
+            if (juice == Juice.FemaleJuice) RecipeManager.Instance.AddIngredient(AethraIngredient.FemaleJuice);
+            else if (juice == Juice.Urine) RecipeManager.Instance.AddIngredient(AethraIngredient.Urine);
         }
 
         public void SetExpression(Expression expression)
         {
             CurrentExpression = expression;
+            if (expression == Expression.Horny) RecipeManager.Instance.AddIngredient(AethraIngredient.Saliva);
         }
 
     }

@@ -65,8 +65,9 @@ namespace PotionMorph.Manager
             });
         }
 
-        private void AddIngredient(AethraIngredient ingr)
+        public void AddIngredient(AethraIngredient ingr)
         {
+            Debug.Log($"adding {ingr}");
             if (!PersistencyManager.Instance.SaveData.AethraIngredients.Contains(ingr))
             {
                 SpawnIngredientButton(ingr);
@@ -102,8 +103,9 @@ namespace PotionMorph.Manager
                 }
 
                 _recipeText.text = targetRecipe.Name;
-                foreach (var effect in targetRecipe.Effect) 
+                foreach (var effect in targetRecipe.Effect)
                 {
+                    Debug.Log($"new {effect}");
                     switch (effect)
                     {
                         case RecipeEffect.IncreaseBreast: PersistencyManager.Instance.SaveData.UpdateBreast(true); break;
@@ -132,14 +134,6 @@ namespace PotionMorph.Manager
                         case RecipeEffect.SetBraids: PersistencyManager.Instance.SaveData.SetHair(HairStyle.Braids); break;
                         case RecipeEffect.SetSmallHair: PersistencyManager.Instance.SaveData.SetHair(HairStyle.SmallHair); break;
                         case RecipeEffect.SetLongHair: PersistencyManager.Instance.SaveData.SetHair(HairStyle.LongHair); break;
-                        case RecipeEffect.UnlockCum: AddIngredient(AethraIngredient.Cum); break;
-                        case RecipeEffect.UnlockFemaleJuice: AddIngredient(AethraIngredient.FemaleJuice); break;
-                        case RecipeEffect.UnlockMilk: AddIngredient(AethraIngredient.Milk); break;
-                        case RecipeEffect.UnlockPheromones: AddIngredient(AethraIngredient.Pheromones); break;
-                        case RecipeEffect.UnlockPubes: AddIngredient(AethraIngredient.Pubes); break;
-                        case RecipeEffect.UnlockSaliva: AddIngredient(AethraIngredient.Saliva); break;
-                        case RecipeEffect.UnlockSweat: AddIngredient(AethraIngredient.Sweat); break;
-                        case RecipeEffect.UnlockUrine: AddIngredient(AethraIngredient.Urine); break;
                         default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
                     }
                 }

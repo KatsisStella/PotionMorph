@@ -50,7 +50,7 @@ namespace PotionMorph.Manager
             var sd = PersistencyManager.Instance.SaveData;
             if (sd.IsPregnant)
             {
-                _pregBoobs[Mathf.Clamp((int)sd.CurrentBreast, 0, _pregBoobs.Length)].SetActive(true);
+                _pregBoobs[Mathf.Clamp((int)sd.CurrentBreast, 0, _pregBoobs.Length - 1)].SetActive(true);
             }
             else
             {

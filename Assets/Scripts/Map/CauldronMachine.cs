@@ -1,6 +1,5 @@
 ﻿using PotionMorph.Manager;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace PotionMorph.Map
@@ -25,6 +24,7 @@ namespace PotionMorph.Map
             {
                 if (go.CompareTag("Spatula") && !go.GetComponent<Container>().HasAny)
                 {
+                    GameManager.Instance.Drop(go.GetComponent<Container>());
                     _spatula.Rigidbody.linearVelocity = Vector2.zero;
                     _spatula.Rigidbody.bodyType = RigidbodyType2D.Kinematic;
                     _spatula.transform.position = _baseSpatulaPos;
