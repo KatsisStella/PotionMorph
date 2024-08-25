@@ -67,7 +67,6 @@ namespace PotionMorph.Manager
 
         public void AddIngredient(AethraIngredient ingr)
         {
-            Debug.Log($"adding {ingr}");
             if (!PersistencyManager.Instance.SaveData.AethraIngredients.Contains(ingr))
             {
                 SpawnIngredientButton(ingr);
@@ -103,9 +102,9 @@ namespace PotionMorph.Manager
                 }
 
                 _recipeText.text = targetRecipe.Name;
+                _recipeEffect.text = targetRecipe.Description;
                 foreach (var effect in targetRecipe.Effect)
                 {
-                    Debug.Log($"new {effect}");
                     switch (effect)
                     {
                         case RecipeEffect.IncreaseBreast: PersistencyManager.Instance.SaveData.UpdateBreast(true); break;
@@ -137,7 +136,6 @@ namespace PotionMorph.Manager
                         default: throw new System.NotImplementedException($"Effect {targetRecipe.Effect} was not implemented");
                     }
                 }
-                _recipeEffect.text = string.Empty;
 
                 PersistencyManager.Instance.Save();
                 AethraManager.Instance.UpdateAethra();
