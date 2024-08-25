@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Cardio Cream
   m_EditorClassIdentifier: 
   Name: Cardio Cream
-  Description: Increases the size of your penis and boobs!
+  Description: Make you slimer
   Ingredients:
   - {fileID: 11400000, guid: 81b57be5ccdf3f0498fcbfa9a665da07, type: 2}
   - {fileID: 11400000, guid: ba5669570f70a4b42bfa91bc4a8dbb2d, type: 2}
   - {fileID: 11400000, guid: 1a5462da3ba474a44baa5cf804f6f5db, type: 2}
-  Effect: 0100000009000000040000000c000000
+  Effect: 0100000003000000

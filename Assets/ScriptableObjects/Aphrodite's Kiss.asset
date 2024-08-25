@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Aphrodite's Kiss
   m_EditorClassIdentifier: 
   Name: Aphrodite's Kiss
-  Description: Increases the size of your penis and boobs!
+  Description: A goddeess kiss cleaning your body
   Ingredients:
   - {fileID: 11400000, guid: 917671fb2e33b4441a0b73ab14c1bf8b, type: 2}
   - {fileID: 11400000, guid: bcf25cfa734618d4a9387c74260ddc9f, type: 2}
   - {fileID: 11400000, guid: 2654d4cfd4ab5024fb453261612897c7, type: 2}
-  Effect: 0a0000000c000000
+  Effect: 17000000100000000d000000

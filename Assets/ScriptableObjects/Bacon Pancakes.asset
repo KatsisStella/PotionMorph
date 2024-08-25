@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Bacon Pancakes
   m_EditorClassIdentifier: 
   Name: Bacon Pancakes
-  Description: Increases the size of your penis and boobs!
+  Description: A good meal that make you calmer
   Ingredients:
   - {fileID: 11400000, guid: 1a5462da3ba474a44baa5cf804f6f5db, type: 2}
   - {fileID: 11400000, guid: 19f5063ec618f4946ab2c7653e63a0a4, type: 2}
   - {fileID: 11400000, guid: 01814a13b6af8e349943f190df54d117, type: 2}
-  Effect: 00000000020000000c000000
+  Effect: 130000000b000000
