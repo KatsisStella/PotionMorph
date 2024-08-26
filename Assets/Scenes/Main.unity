@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca9480e1a843984cb470c17f6e991f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spatula: {fileID: 0}
+  _spatula: {fileID: 942541428}
   _liquid: {fileID: 1476064605}
   _liquidSprite:
   - {fileID: 21300000, guid: 5ff0be22848e4bd41a871742b1e57f60, type: 3}
