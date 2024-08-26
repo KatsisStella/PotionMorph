@@ -1,5 +1,6 @@
 ﻿using PotionMorph.Manager;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace PotionMorph.Map
@@ -8,6 +9,12 @@ namespace PotionMorph.Map
     {
         [SerializeField]
         private Container _spatula;
+
+        [SerializeField]
+        private SpriteRenderer _liquid;
+
+        [SerializeField]
+        private Sprite[] _liquidSprite;
 
         private readonly List<Ingredient> _ingredients = new();
 
@@ -54,6 +61,15 @@ namespace PotionMorph.Map
             _ingredients.Add(ingredient);
             if (_ingredients.Count >= 3)
             {
+                _liquid.gameObject.SetActive(true);
+                Color c = _ingredients[0].Color;
+                foreach (var curr in _ingredients.Skip(1))
+                {
+                    c += curr.Color;
+                }
+                _liquid.color = c / _ingredients.Count;
+                _liquid.sprite = _liquidSprite[Mathf.RoundToInt(_ingredients.Sum(x => (float)x.LiquidState) / _ingredients.Count)];
+
                 _spatula.Fill(_ingredients.ToArray());
                 _ingredients.Clear();
                 _spatula.CanGrab = true;
