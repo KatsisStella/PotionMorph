@@ -22,7 +22,7 @@ namespace PotionMorph.Map
         protected virtual void DenyConsumption(GameObject ingredient)
         { }
 
-        public void Unregister(IProp prop)
+        public virtual void Unregister(IProp prop)
         {
             _container.Rigidbody.bodyType = RigidbodyType2D.Dynamic;
             _container = null;

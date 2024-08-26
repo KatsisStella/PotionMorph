@@ -89,5 +89,12 @@ namespace PotionMorph.Map
                 rb.AddForce(new Vector2(Random.Range(-.25f, .25f), 1f).normalized * 20f, ForceMode2D.Impulse);
             }
         }
+
+        public override void Unregister(IProp prop)
+        {
+            base.Unregister(prop);
+
+            _liquid.gameObject.SetActive(false);
+        }
     }
 }
