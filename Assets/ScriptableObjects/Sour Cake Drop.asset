@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40858894d2d6ea43a151984dcd4192a, type: 3}
   m_Name: Sour Cake Drop
   m_EditorClassIdentifier: 
-  Name: Remove what wasn't here before
-  Description: Increases the size of your penis and boobs!
+  Name: Sour Cake Drop
+  Description: Remove what wasn't here before
   Ingredients:
   - {fileID: 11400000, guid: ba5669570f70a4b42bfa91bc4a8dbb2d, type: 2}
   - {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
   - {fileID: 11400000, guid: 2654d4cfd4ab5024fb453261612897c7, type: 2}
   Effect: 090000000f000000
+  AethraDialogue: 
+  WillowDialogue: 

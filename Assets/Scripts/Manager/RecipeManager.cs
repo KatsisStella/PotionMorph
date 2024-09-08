@@ -172,7 +172,9 @@ namespace PotionMorph.Manager
             else
             {
                 _recipeText.text = "Unidentified mix";
-                _recipeEffect.text = $"This recipe need to be more {GetClosestUndiscoveredIngredient(ingredients).Hint}";
+                var hint = GetClosestUndiscoveredIngredient(ingredients);
+                if (hint == null) _recipeEffect.text = "You already found all recipes";
+                else _recipeEffect.text = $"This recipe need to be more {hint.Hint}";
 
                 _lastIngredient = null;
             }
