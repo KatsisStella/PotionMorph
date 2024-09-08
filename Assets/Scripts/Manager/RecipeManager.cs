@@ -189,7 +189,7 @@ namespace PotionMorph.Manager
             if (pending.Any())
             {
                 return pending
-                    .OrderBy(x => x.Ingredients.Count(y => ingredients.Any(z => z.Name == y.Name)))
+                    .OrderByDescending(x => x.Ingredients.Count(y => ingredients.Any(z => z.Name == y.Name)))
                     .First()
                     .Ingredients
                     .Where(x => !ingredients.Any(y => y.Name == x.Name))
