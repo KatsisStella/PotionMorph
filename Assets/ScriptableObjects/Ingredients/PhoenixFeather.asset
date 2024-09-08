@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PhoenixFeather
   m_EditorClassIdentifier: 
   Name: Phoenix Feather
+  AethraIngredient: 8
   LiquidState: 1
   Color: {r: 0.8679245, g: 0.3645828, b: 0.24973297, a: 1}
   SingleAdjective: phoenix concentrate

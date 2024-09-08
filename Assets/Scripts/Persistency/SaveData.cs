@@ -93,7 +93,8 @@ namespace PotionMorph.Persistency
         Pubes,
         Saliva,
         Sweat,
-        Urine
+        Urine,
+        NotApplicable
     }
 
     public enum HairStyle

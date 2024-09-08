@@ -1,6 +1,8 @@
-﻿using PotionMorph.Persistency;
+﻿using NUnit.Framework;
+using PotionMorph.Persistency;
 using PotionMorph.SO;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
@@ -32,6 +34,8 @@ namespace PotionMorph.Manager
 
         private IngredientInfo _lastIngredient;
 
+        private List<AethraIngredient> _unlockedIngredients = new();
+
         private void Awake()
         {
             Instance = this;
@@ -45,6 +49,7 @@ namespace PotionMorph.Manager
 
         private void SpawnIngredientButton(AethraIngredient ingr)
         {
+            _unlockedIngredients.Add(ingr);
             var go = ingr switch
             {
                 AethraIngredient.Cum => _cum,
@@ -178,7 +183,9 @@ namespace PotionMorph.Manager
 
         private IngredientInfo GetClosestUndiscoveredIngredient(IngredientInfo[] ingredients)
         {
-            var pending = _recipes.Where(x => !PersistencyManager.Instance.SaveData.DiscoveredRecipes.Any(y => y == x.Name));
+            var pending = _recipes
+                .Where(x => !PersistencyManager.Instance.SaveData.DiscoveredRecipes.Any(y => y == x.Name))
+                .Where(x =>  x.Ingredients.All(y => y.AethraIngredient == AethraIngredient.NotApplicable || _unlockedIngredients.Contains(y.AethraIngredient)));
             if (pending.Any())
             {
                 return pending

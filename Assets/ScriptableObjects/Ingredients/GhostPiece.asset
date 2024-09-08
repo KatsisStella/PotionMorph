@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GhostPiece
   m_EditorClassIdentifier: 
   Name: Ghost Piece
+  AethraIngredient: 8
   LiquidState: 0
   Color: {r: 0.9339623, g: 0.9339623, b: 0.9339623, a: 0.5254902}
   SingleAdjective: scary fragment

@@ -1,4 +1,5 @@
 ﻿using PotionMorph.Map;
+using PotionMorph.Persistency;
 using UnityEngine;
 
 namespace PotionMorph.SO
@@ -8,6 +9,7 @@ namespace PotionMorph.SO
     {
         public string Name;
 
+        public AethraIngredient AethraIngredient;
         public LiquidState LiquidState;
         public Color Color;
 

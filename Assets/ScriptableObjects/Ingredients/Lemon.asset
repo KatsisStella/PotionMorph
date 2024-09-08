@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Lemon
   m_EditorClassIdentifier: 
   Name: Lemon
+  AethraIngredient: 8
   LiquidState: 0
   Color: {r: 0.97777355, g: 1, b: 0.08962262, a: 1}
   SingleAdjective: lemon juice

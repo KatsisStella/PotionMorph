@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Urine
   m_EditorClassIdentifier: 
   Name: Urine
+  AethraIngredient: 7
   LiquidState: 0
   Color: {r: 0.9245283, g: 0.7951185, b: 0.12646852, a: 1}
   SingleAdjective: pee

@@ -205,5 +205,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _info: {fileID: 11400000, guid: d9f19d3a0b8bfd6489292f88aacfffba, type: 2}
-  _liquidState: 0
-  _color: {r: 0.9716981, g: 0.9132942, b: 0, a: 0.56078434}

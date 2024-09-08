@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: LivingInk
   m_EditorClassIdentifier: 
   Name: Living Ink
+  AethraIngredient: 8
   LiquidState: 0
   Color: {r: 0.14214565, g: 0.14177644, b: 0.509434, a: 1}
   SingleAdjective: tinted juice

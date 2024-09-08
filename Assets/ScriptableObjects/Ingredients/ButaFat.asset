@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ButaFat
   m_EditorClassIdentifier: 
   Name: Buta Fat
+  AethraIngredient: 8
   LiquidState: 2
   Color: {r: 0.754717, g: 0.40795156, b: 0.21003917, a: 1}
   SingleAdjective: buta broth

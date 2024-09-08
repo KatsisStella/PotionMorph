@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FemaleJuice
   m_EditorClassIdentifier: 
   Name: Female Juice
+  AethraIngredient: 1
   LiquidState: 0
   Color: {r: 0.8396226, g: 0.8396226, b: 0.8396226, a: 1}
   SingleAdjective: pleasing substance

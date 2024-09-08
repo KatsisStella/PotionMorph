@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Shard
   m_EditorClassIdentifier: 
   Name: Tetra Shard
+  AethraIngredient: 8
   LiquidState: 0
   Color: {r: 0.14363459, g: 0, b: 0.41509432, a: 1}
   SingleAdjective: radioactive liquid

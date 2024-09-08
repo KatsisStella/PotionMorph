@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pheromones
   m_EditorClassIdentifier: 
   Name: Pheromones
+  AethraIngredient: 3
   LiquidState: 0
   Color: {r: 0.9056604, g: 0.5938057, b: 0.8456148, a: 1}
   SingleAdjective: excilirating smell

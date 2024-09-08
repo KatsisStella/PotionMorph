@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cinnammon
   m_EditorClassIdentifier: 
   Name: Cinnammon
+  AethraIngredient: 8
   LiquidState: 1
   Color: {r: 0.4056604, g: 0.12958172, b: 0.047837302, a: 1}
   SingleAdjective: cinnammon extract

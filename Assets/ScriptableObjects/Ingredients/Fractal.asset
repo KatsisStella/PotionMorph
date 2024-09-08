@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Fractal
   m_EditorClassIdentifier: 
   Name: Fractal
+  AethraIngredient: 8
   LiquidState: 2
   Color: {r: 0.41897056, g: 0.054512277, b: 0.46226418, a: 1}
   SingleAdjective: sierpinski's juice

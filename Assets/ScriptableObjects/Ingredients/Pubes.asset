@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pubes
   m_EditorClassIdentifier: 
   Name: Pubes
+  AethraIngredient: 4
   LiquidState: 0
   Color: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 1}
   SingleAdjective: female hair
