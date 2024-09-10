@@ -18,6 +18,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a5462da3ba474a44baa5cf804f6f5db, type: 2}
   - {fileID: 11400000, guid: bcf25cfa734618d4a9387c74260ddc9f, type: 2}
   - {fileID: 11400000, guid: 01814a13b6af8e349943f190df54d117, type: 2}
-  Effect: 0000000002000000
+  Effect: 000000000000000002000000
   AethraDialogue: Sample Aethra text
   WillowDialogue: Sample Willow text
