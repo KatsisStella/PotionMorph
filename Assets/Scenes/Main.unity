@@ -561,7 +561,7 @@ PrefabInstance:
     - target: {fileID: 3375412227772116268, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6926787523474499897, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
+      objectReference: {fileID: -1647512519179659763, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
     - target: {fileID: 5911960092314381022, guid: 621b2c85a84461c4a9abe5bfa10fd22a, type: 3}
       propertyPath: m_text
       value: Cinnamon
@@ -1641,7 +1641,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.24181205, g: 0.28718704, b: 0.3584906, a: 0}
+  m_BackGroundColor: {r: 0.3584906, g: 0.18488178, b: 0.1504984, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -5210,8 +5210,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731449556}
   m_HandleRect: {fileID: 731449555}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.33799994
+  m_Value: 1.0000001
+  m_Size: 0.33799997
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
