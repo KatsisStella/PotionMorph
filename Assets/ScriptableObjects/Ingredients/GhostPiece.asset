@@ -20,3 +20,4 @@ MonoBehaviour:
   TwoAdjective: 'Translucent '
   ThreeName: Juice of white Tetra
   Hint: nothing
+  Sprite: {fileID: 3821064342779469192, guid: c0a8f413a93b74549a28074951a64d31, type: 3}

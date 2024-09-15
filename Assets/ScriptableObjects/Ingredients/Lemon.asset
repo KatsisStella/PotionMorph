@@ -20,3 +20,4 @@ MonoBehaviour:
   TwoAdjective: Lemon flavored
   ThreeName: Lemonade
   Hint: sour
+  Sprite: {fileID: -5553541229959162571, guid: c0a8f413a93b74549a28074951a64d31, type: 3}

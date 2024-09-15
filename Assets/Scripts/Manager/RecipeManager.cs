@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+﻿using PotionMorph.Map;
 using PotionMorph.Persistency;
 using PotionMorph.SO;
 using System.Collections;
@@ -21,9 +21,6 @@ namespace PotionMorph.Manager
         private RecipeInfo[] _recipes;
 
         [SerializeField]
-        private TMP_Text _importantRecipes;
-
-        [SerializeField]
         private Transform _ingredientContainer;
 
         [SerializeField]
@@ -31,6 +28,12 @@ namespace PotionMorph.Manager
 
         [SerializeField]
         private GameObject _cum, _femaleJuice, _milk, _pheromones, _pubes, _saliva, _sweat, _urine;
+
+        [SerializeField]
+        private Transform _recipeListContainer;
+
+        [SerializeField]
+        private GameObject _recipeListPrefab;
 
         private IngredientInfo _lastIngredient;
 
@@ -86,7 +89,21 @@ namespace PotionMorph.Manager
 
         private void UpdateRecipeDisplay()
         {
-            _importantRecipes.text = string.Join("\n", PersistencyManager.Instance.SaveData.DiscoveredRecipes.OrderBy(x => x));
+            for (int i = 0; i < _recipeListContainer.childCount; i++) Destroy(_recipeListContainer.GetChild(i).gameObject);
+
+            foreach (var recipe in PersistencyManager.Instance.SaveData.DiscoveredRecipes.OrderBy(x => x))
+            {
+                var go = Instantiate(_recipeListPrefab, _recipeListContainer);
+                var info = _recipes.FirstOrDefault(x => string.Equals(x.Name, recipe, System.StringComparison.InvariantCultureIgnoreCase));
+                if (info != null)
+                {
+                    go.GetComponent<RecipeData>().Init(info);
+                }
+                else
+                {
+                    Debug.LogError($"Impossible to find recipe {recipe}");
+                }
+            }
         }
 
         public void LoadRecipe(IngredientInfo[] ingredients)

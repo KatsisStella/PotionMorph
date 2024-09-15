@@ -20,3 +20,4 @@ MonoBehaviour:
   TwoAdjective: Dry
   ThreeName: Cinnammon syrup
   Hint: dry
+  Sprite: {fileID: -2066111479680368272, guid: c0a8f413a93b74549a28074951a64d31, type: 3}

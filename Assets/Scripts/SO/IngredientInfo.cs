@@ -18,5 +18,7 @@ namespace PotionMorph.SO
         public string ThreeName;
 
         public string Hint;
+
+        public Sprite Sprite;
     }
 }

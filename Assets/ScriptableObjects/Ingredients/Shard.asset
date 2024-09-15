@@ -20,3 +20,4 @@ MonoBehaviour:
   TwoAdjective: Corrupted
   ThreeName: Glass of pure Tetra
   Hint: crunchy
+  Sprite: {fileID: 3222996833039826069, guid: c0a8f413a93b74549a28074951a64d31, type: 3}
