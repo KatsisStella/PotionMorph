@@ -38,6 +38,13 @@ namespace PotionMorph.Manager
             UpdateAethra();
         }
 
+        public void ResetAethra()
+        {
+            PersistencyManager.Instance.SaveData.ResetAethra();
+            PersistencyManager.Instance.Save();
+            UpdateAethra();
+        }
+
         public void UpdateAethra()
         {
             // Disable all

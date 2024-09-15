@@ -14,9 +14,23 @@ namespace PotionMorph.Persistency
         public bool HavePheromoneCloud { set; get; } = false;
         public bool HaveSweat { set; get; } = false;
         public Juice Juice { set; get; } = Juice.None;
-        public bool IsPregnant = false; public List<AethraIngredient> AethraIngredients { set; get; } = new();
+        public bool IsPregnant = false;
+        public List<AethraIngredient> AethraIngredients { set; get; } = new();
 
         public List<string> DiscoveredRecipes { set; get; } = new();
+
+        public void ResetAethra()
+        {
+            CurrentBreast = Size.Small;
+            CurrentPenis = null;
+            CurrentHair = HairStyle.LongHair;
+            CurrentBodyHair = Size.Small;
+            CurrentExpression = Expression.Idle;
+            HavePheromoneCloud = false;
+            HaveSweat = false;
+            Juice = Juice.None;
+            IsPregnant = false;
+        }
 
         public void UpdateBreast(bool increase)
         {

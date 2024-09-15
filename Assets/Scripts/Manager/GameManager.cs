@@ -12,6 +12,9 @@ namespace PotionMorph.Manager
 
         private IProp _follower;
 
+        [SerializeField]
+        private GameObject _menu;
+
         private void Awake()
         {
             Instance = this;
@@ -79,6 +82,14 @@ namespace PotionMorph.Manager
             else if (value.phase == InputActionPhase.Canceled)
             {
                 Drop(_follower);
+            }
+        }
+
+        public void OnMenuPressed(InputAction.CallbackContext value)
+        {
+            if (value.phase == InputActionPhase.Performed)
+            {
+                _menu.SetActive(!_menu.activeInHierarchy);
             }
         }
     }
